@@ -1,51 +1,51 @@
 # TubeForge
 
-**Endir. Oyren. Kes.**
+**Endir. Öyrən. Kəs.**
 
-Oz kompyuterinde isleyen media studiyasi. YouTube ve 1000+ saytdan video/audio endirir, muhazireni ders materialina cevirir, FFmpeg ile klip kesir, mahini tanidir. Fayllar kenar cloud-a getmir — her sey bu mashinda qalir.
+Öz kompüterində işləyən lokal media studiyası. YouTube və 1000+ saytdan video/audio endirir, mühazirəni dərs materialına çevirir, FFmpeg ilə kliplər kəsir və mahnıları tanıyır. Fayllar xarici buluda göndərilmir — hər şey bu kompüterdə qalır.
 
 | | | | |
 | --- | --- | --- | --- |
-| **Diller** | **Platformalar** | **Konteynerler** | **Harada** |
-| EN, AZ, RU, TR | yt-dlp extractor siyahisi | MP4, WebM, MKV, MOV, GIF | Yalniz senin mashinin |
+| **Dillər** | **Platformalar** | **Konteynerlər** | **Harada** |
+| EN, AZ, RU, TR | yt-dlp extractor siyahısı | MP4, WebM, MKV, MOV, GIF | Yalnız sənin kompüterində |
 
 ---
 
-## Mundericat
+## Mündəricat
 
-1. [Ne is gorur](#ne-is-gorur)
-2. [Nece axir](#nece-axir)
+1. [Nə iş görür](#nə-iş-görür)
+2. [Necə işləyir](#necə-işləyir)
 3. [Modullar](#modullar)
 4. [Formatlar](#formatlar)
 5. [Texnologiya](#texnologiya)
-6. [Qurashdirma](#qurashdirma)
+6. [Quraşdırma](#quraşdırma)
 7. [Konfiqurasiya](#konfiqurasiya)
-8. [Layihe strukturu](#layihe-strukturu)
-9. [Huquqi qeyd](#huquqi-qeyd)
+8. [Layihə strukturu](#layihə-strukturu)
+9. [Hüquqi qeyd](#hüquqi-qeyd)
 
 ---
 
-## Ne is gorur
+## Nə iş görür
 
-TubeForge ucuncu terefin "cloud downloader"-i **deyil**. Linki yapishdirirsan, server metadata-ni **yt-dlp** ve ya **ytdl-core** ile chixarir, **FFmpeg** chevirir ve kesir. Fayllar, transkriptler ve tarikhe **SQLite + lokal disk**-de qalir.
+TubeForge üçüncü tərəfin **cloud downloader** xidməti deyil. Linki yapışdırırsan, server metadata-nı **yt-dlp** və ya **ytdl-core** ilə çıxarır, **FFmpeg** isə faylları çevirir və kəsir. Fayllar, transkriptlər və tarixçə **SQLite + lokal diskdə** saxlanılır.
 
-Brauzerde [http://localhost:3000](http://localhost:3000) ach — eyni interfeysdən endirme, playlist novbesi, ders paketi, klip ve mahni tanima.
+Brauzerdə [http://localhost:3000](http://localhost:3000) ünvanını aç — eyni interfeysdən endirmə, playlist növbəsi, dərs paketi, klip və mahnı tanıma funksiyalarından istifadə et.
 
-| Modul | Qisa izah |
+| Modul | Qısa izah |
 | --- | --- |
-| Downloader | Keyfiyyet, kodek, olchunu gor; original ve ya chevrilmish fayl endir |
-| Playlist | Siyahini yukle, videolari sech, novbe ile endir |
-| Study Mode | Xulase, esas anlayishlar, quiz, axtarila bilen transkript |
-| Clip Studio | Vaxt kesimi, bashliq, watermark, subtitr, progress bar, GIF |
-| Audio ID | Mikrofon ve ya sistem sesi ile mahni tani |
-| Tarikhe | Tamamlanmish endirmeler lokal bazada |
+| **Downloader** | Keyfiyyət, kodek və ölçünü göstərir; orijinal və ya çevrilmiş faylı endirir |
+| **Playlist** | Siyahını yükləyir, videoları seçir və növbə ilə endirir |
+| **Study Mode** | Xülasə, əsas anlayışlar, quiz və axtarıla bilən transkript yaradır |
+| **Clip Studio** | Vaxt kəsimi, başlıq, watermark, subtitr, progress bar və GIF imkanları verir |
+| **Audio ID** | Mikrofon və ya sistem səsi ilə mahnını tanıyır |
+| **Tarixçə** | Tamamlanmış endirmələri lokal bazada saxlayır |
 
 ---
 
-## Nece axir
+## Necə işləyir
 
-```
-  [ Link yapishdir ]
+```text
+  [ Linki yapışdır ]
            |
            v
      +-----------+
@@ -61,14 +61,14 @@ Brauzerde [http://localhost:3000](http://localhost:3000) ach — eyni interfeysd
     +----+----+----+----+
     |    |    |    |    |
     v    v    v    v    v
- Endir  Playlist  Study  Klip  Audio ID
+  Endir Playlist Study Klip Audio ID
     |               |
     v               v
  SQLite        Whisper (subtitr yoxdursa)
 ```
 
-```
-  Brauzer (public/)  -->  Express (server.js)
+```text
+  Brauzer (public/) --> Express (server.js)
                                 |
               +-----------------+-----------------+
               |                 |                 |
@@ -86,81 +86,83 @@ Brauzerde [http://localhost:3000](http://localhost:3000) ach — eyni interfeysd
 
 ### Downloader
 
-YouTube, TikTok, Instagram, Facebook, X, Twitch, VK, OK.ru ve yt-dlp-nin tanidighi minlerle sayt.
+YouTube, TikTok, Instagram, Facebook, X, Twitch, VK, OK.ru və yt-dlp tərəfindən tanınan minlərlə sayt.
 
-- Format cedveli: keyfiyyet, kodek, FPS, bitrate, olchu
-- Video ve audio ayri gelende FFmpeg merge
-- Yash / bot mehdudiyyeti uchun `COOKIES_FILE` (Netscape `.txt` ve ya JSON)
+- Format cədvəli: keyfiyyət, kodek, FPS, bitrate və ölçü
+- Video və audio ayrı gəldikdə FFmpeg ilə birləşdirmə
+- Yaş və bot məhdudiyyətləri üçün `COOKIES_FILE` (`.txt` Netscape formatı və ya JSON)
 
 ### Playlist
 
-Siyahini ach, hamisini ve ya sechilmishleri novbeye qoy. Keyfiyyeti ve konteyneri bir defe sech. Dayandir, kech, temizlemek. Uzun siyahilar `MAX_PLAYLIST_ITEMS` ile kesilir (standart **400**).
+Siyahını aç, hamısını və ya seçilmiş videoları növbəyə qoy. Keyfiyyəti və konteyneri bir dəfə seç.
+
+Növbəni dayandırmaq, elementləri keçmək və təmizləmək mümkündür. Uzun siyahılar `MAX_PLAYLIST_ITEMS` ilə məhdudlaşdırılır. Standart limit **400 elementdir**.
 
 ### AI Study Mode
 
-```
+```text
   Subtitr ----+
-              +---->  xulase  |  anlayishlar  |  quiz  |  transkript
+              +----> xülasə | anlayışlar | quiz | transkript
   Whisper ----+
 ```
 
-| Menbe | Ne bash verir |
+| Mənbə | Nə baş verir |
 | --- | --- |
-| Caption track | Hazir subtitr oxunur |
-| Caption yoxdur | `npm run setup:whisper` — ses bu serverde yaziya chevrilir |
-| `ANTHROPIC_API_KEY` | Claude ders paketi yazar |
-| Achar yoxdur | Offline analyser shebekesiz ishleyir |
+| **Caption track** | Hazır subtitr oxunur |
+| **Caption yoxdur** | `npm run setup:whisper` ilə audio bu serverdə mətnə çevrilir |
+| `ANTHROPIC_API_KEY` | Claude dərs paketi yaradır |
+| **API açarı yoxdur** | Offline analyser şəbəkəsiz işləyir |
 
-Setirde klikle — pleyer hemin saniyeye tullanir.
+Transkript sətrinə klik et — pleyer həmin saniyəyə keçir.
 
 ### FFmpeg Clip Studio
 
-| Parametr | Ne edir |
+| Parametr | Nə edir |
 | --- | --- |
-| Vaxt aralighi | Standart max 10 deqiqe (`MAX_CLIP_SECONDS`) |
-| Overlay | Bashliq metni, watermark, progress bar |
-| Subtitr | Movcud caption yandirilir |
-| Chixish | mp4, webm, mkv, mov, gif |
-| Omur | Klipler `CLIP_RETENTION_HOURS` sonra silinir (standart 24 saat) |
+| **Vaxt aralığı** | Standart maksimum 10 dəqiqə (`MAX_CLIP_SECONDS`) |
+| **Overlay** | Başlıq mətni, watermark və progress bar əlavə edir |
+| **Subtitr** | Mövcud caption trekini videoya yandırır |
+| **Çıxış** | MP4, WebM, MKV, MOV, GIF |
+| **Ömür** | Kliplər `CLIP_RETENTION_HOURS` müddətindən sonra silinir (standart 24 saat) |
 
-GIF uchun ayrica qisa limit var (`MAX_GIF_SECONDS`, standart 30 saniye), chunki her kadr shekil kimi aghirdir.
+GIF üçün ayrıca daha qısa limit var: `MAX_GIF_SECONDS` standart olaraq **30 saniyədir**. Bunun səbəbi hər kadrın ayrıca şəkil kimi emal olunmasıdır.
 
 ### Audio ID
 
-Mikrofon ve ya sistem sesi. Brauzer yalniz **HTTPS** ve ya **localhost**-da capture icazesi verir.
+Mikrofon və ya sistem səsi ilə işləyir. Brauzer yalnız **HTTPS** və ya **localhost** üzərindən capture icazəsi verir.
 
-| Prioritet | Xidmet |
+| Prioritet | Xidmət |
 | --- | --- |
-| 1 (acharlar doludursa) | ACRCloud |
-| 2 / default | AudD (pulsuz kvota; token limiti artirir) |
+| **1** | ACRCloud, əgər açarlar doldurulubsa |
+| **2 / standart** | AudD (pulsuz kvota; token ilə limit artırılır) |
 
 ---
 
 ## Formatlar
 
-**Video**
+### Video
 
 | Konteyner | Tipik kodek | Qeyd |
 | --- | --- | --- |
-| MP4 | H.264 | Universal |
-| WebM | VP9 / VP8 | Veb |
-| MKV | muxtelif | Chevik konteyner |
-| MOV | H.264 | Apple |
-| GIF | animasiya | Sessiz, Clip Studio |
+| **MP4** | H.264 | Universal |
+| **WebM** | VP9 / VP8 | Veb üçün |
+| **MKV** | Müxtəlif | Çevik konteyner |
+| **MOV** | H.264 | Apple ekosistemi |
+| **GIF** | Animasiya | Səssiz, Clip Studio üçün |
 
-**Audio**
+### Audio
 
-| Lossy | Lossless / xususi |
+| Lossy | Lossless / xüsusi |
 | --- | --- |
 | MP3, AAC, M4A, Opus, OGG | FLAC, ALAC, WAV |
 
-Original stream yeniden encode olunmur. Chevrilme sechende FFmpeg transcode edir ve daha uzun chekir.
+Orijinal stream yenidən kodlaşdırılmır. Çevrilmə seçildikdə FFmpeg transcode edir və proses daha uzun çəkə bilər.
 
 ---
 
 ## Texnologiya
 
-```
+```text
                     TubeForge
                         |
      +----------+-------+--------+----------+
@@ -174,22 +176,24 @@ Original stream yeniden encode olunmur. Chevrilme sechende FFmpeg transcode edir
 
 | Qat | Texnologiya |
 | --- | --- |
-| Server | Node.js 18.17+, Express |
-| Media | `@distube/ytdl-core`, yt-dlp, FFmpeg (`fluent-ffmpeg`) |
-| Verilenler | better-sqlite3 |
-| Nitq (opsional) | whisper.cpp |
-| AI (opsional) | Anthropic Claude |
-| Frontend | `public/` — HTML, CSS, JS |
+| **Server** | Node.js 18.17+, Express |
+| **Media** | `@distube/ytdl-core`, yt-dlp, FFmpeg (`fluent-ffmpeg`) |
+| **Verilənlər** | better-sqlite3 |
+| **Nitq (opsional)** | whisper.cpp |
+| **AI (opsional)** | Anthropic Claude |
+| **Frontend** | `public/` — HTML, CSS, JavaScript |
 
 ---
 
-## Qurashdirma
+## Quraşdırma
 
-Lazimdir:
+### Tələblər
 
 - [Node.js](https://nodejs.org/) 18.17+
-- [FFmpeg](https://ffmpeg.org/) (ve ya `ffmpeg-static`)
-- YouTube-dan kenar saytlar uchun yt-dlp
+- [FFmpeg](https://ffmpeg.org/) və ya `ffmpeg-static`
+- YouTube-dan kənar saytlar üçün yt-dlp
+
+### Quraşdırma addımları
 
 ```bash
 git clone <repo-url>
@@ -200,65 +204,75 @@ cp .env.example .env
 npm start
 ```
 
-Sonra ach: [http://localhost:3000](http://localhost:3000)
+Sonra brauzerdə aç:
 
-| Emr | Meqsed |
+[http://localhost:3000](http://localhost:3000)
+
+### Əsas əmrlər
+
+| Əmr | Məqsəd |
 | --- | --- |
-| `npm start` | Production server |
-| `npm run dev` | Watch ile yeniden bashlat |
-| `npm run setup:ytdlp` | `./bin` ichinde yt-dlp |
-| `npm run setup:whisper` | Lokal nitq-yazi (Study Mode) |
-| `npm run reset-db` | SQLite-i sifirla |
+| `npm start` | Production server-i işə salır |
+| `npm run dev` | Watch rejimində serveri yenidən başladır |
+| `npm run setup:ytdlp` | yt-dlp-ni `./bin` qovluğuna quraşdırır |
+| `npm run setup:whisper` | Lokal nitq → mətn dəstəyini quraşdırır |
+| `npm run reset-db` | SQLite verilənlər bazasını sıfırlayır |
 
-Azerbaycan / turk nitqi uchun daha yaxshi Whisper modeli:
+Azərbaycan və türk nitqi üçün daha yaxşı nəticə almaq məqsədilə Whisper üçün `small` modeli seçə bilərsən:
 
 ```bash
 WHISPER_MODEL=small npm run setup:whisper
 ```
 
-Saghlamliq yoxlamasi: `GET /api/health`
+Sağlamlıq yoxlaması:
+
+```text
+GET /api/health
+```
 
 ---
 
 ## Konfiqurasiya
 
-`.env.example` faylini `.env` kimi kopyala. Hamisi opsionaldir.
+`.env.example` faylını `.env` kimi kopyala. Bütün dəyişənlər opsionaldır.
 
-| Deyishen | Rol | Standart |
+| Dəyişən | Rol | Standart |
 | --- | --- | --- |
-| `PORT` | HTTP port | `3000` |
-| `MEDIA_ENGINE` | `auto`, `ytdl` ve ya `ytdlp` | `auto` |
-| `YTDLP_PATH` / `FFMPEG_PATH` | Binar yolu | avto-tapilir |
-| `COOKIES_FILE` | Mehdud / bot-gated media | — |
-| `ANTHROPIC_API_KEY` | Claude ders paketi | offline analyser |
+| `PORT` | HTTP portu | `3000` |
+| `MEDIA_ENGINE` | `auto`, `ytdl` və ya `ytdlp` | `auto` |
+| `YTDLP_PATH` / `FFMPEG_PATH` | Binar faylların yolu | Avtomatik tapılır |
+| `COOKIES_FILE` | Məhdud və ya bot-gated media | — |
+| `ANTHROPIC_API_KEY` | Claude dərs paketi | Offline analyser |
 | `MAX_CLIP_SECONDS` | Klip limiti | `600` |
 | `MAX_GIF_SECONDS` | GIF limiti | `30` |
-| `MAX_TRANSCODE_SECONDS` | Aghir encode tavani | `900` |
-| `CLIP_RETENTION_HOURS` | Klip saxlama | `24` |
-| `MAX_PLAYLIST_ITEMS` | Playlist tavani | `400` |
-| `WHISPER_*` | Lokal transkripsiya | `bin/` + `models/` |
-| `AUDD_API_TOKEN` / `ACR_*` | Mahni tanima | AudD pulsuz kvota |
+| `MAX_TRANSCODE_SECONDS` | Ağır encode üçün maksimum müddət | `900` |
+| `CLIP_RETENTION_HOURS` | Kliplərin saxlanma müddəti | `24` |
+| `MAX_PLAYLIST_ITEMS` | Playlist limiti | `400` |
+| `WHISPER_*` | Lokal transkripsiya parametrləri | `bin/` + `models/` |
+| `AUDD_API_TOKEN` / `ACR_*` | Mahnı tanıma | AudD pulsuz kvota |
 
 ---
 
-## Layihe strukturu
+## Layihə strukturu
 
-```
+```text
 TubeForge/
   server.js           API: resolve, download, study, clips, audio-id
-  db.js               SQLite sxema ve sorgular
+  db.js               SQLite sxemi və sorğular
   public/             UI (index.html, style.css, script.js)
   locales/            en, az, ru, tr
-  scripts/            whisper qurashdirma
-  storage/clips/      hazir klipler
-  storage/tmp/        muveqqeti fayllar
+  scripts/            Whisper quraşdırma skriptləri
+  storage/clips/      Hazır kliplər
+  storage/tmp/        Müvəqqəti fayllar
   data/               tubeforge.db (gitignore)
 ```
 
 ---
 
-## Huquqi qeyd
+## Hüquqi qeyd
 
-TubeForge shexsi, self-hosted aletdir. Her platformanin istifade shertleri, muellif huququ ve yerli qanun sene aiddir. Huquq pozuntusu ve ya sene mexsus olmayan girish uchun istifade etme.
+TubeForge şəxsi, self-hosted alətdir. Hər platformanın istifadə şərtlərinə, müəllif hüquqlarına və yerli qanunvericiliyə riayət etmək istifadəçinin məsuliyyətindədir.
 
-**MIT** lisenziya — `package.json`.
+Müəllif hüququnu pozan və ya sənə məxsus olmayan giriş məlumatları ilə istifadə etmə.
+
+**MIT lisenziyası** — `package.json`.
