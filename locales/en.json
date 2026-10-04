@@ -1,0 +1,514 @@
+{
+  "meta": {
+    "code": "en",
+    "name": "English",
+    "native": "English",
+    "dir": "ltr"
+  },
+  "app": {
+    "name": "TubeForge",
+    "tagline": "Download. Study. Clip.",
+    "description": "Download, convert and clip media from over a thousand sites, turn talks into study material, and identify songs — all processed on your own machine."
+  },
+  "nav": {
+    "downloader": "Downloader",
+    "playlist": "Playlist",
+    "study": "Study Mode",
+    "clips": "Clip Studio",
+    "history": "History",
+    "menu": "Menu",
+    "close": "Close",
+    "theme": "Theme",
+    "themeLight": "Light mode",
+    "themeDark": "Dark mode",
+    "language": "Language",
+    "audioId": "Audio ID"
+  },
+  "hero": {
+    "title": "Your content, your rules,",
+    "titleAccent": "Everything on social media, on your terms.",
+    "placeholder": "https://www.youtube.com/watch?v=…",
+    "analyze": "Search",
+    "analyzing": "Analyzing…",
+    "paste": "Paste from clipboard",
+    "clear": "Clear input",
+    "stats": {
+      "videoFormats": "Video Formats",
+      "audioFormats": "Audio Formats",
+      "languages": "Interface Languages",
+      "platforms": "Supported Platforms",
+      "platformsHint": "sites reachable through yt-dlp"
+    }
+  },
+  "input": {
+    "empty": "Paste a link to get started.",
+    "invalid": "That does not look like a valid link.",
+    "detectedVideo": "Video link detected",
+    "detectedPlaylist": "Playlist link detected",
+    "pasteDenied": "Clipboard access was blocked by the browser.",
+    "pasteEmpty": "Your clipboard is empty."
+  },
+  "platforms": {
+    "label": "Or pick a platform",
+    "more": "+100 More",
+    "moreTitle": "Supported sites",
+    "moreSubtitle": "Extraction runs through yt-dlp, which supports well over a thousand sites. These are the ones people ask for most.",
+    "moreHint": "Anything not listed is still worth pasting — if yt-dlp knows the site, TubeForge can pull it.",
+    "detected": "{platform} link detected",
+    "authNote": "Private, age-gated or region-locked posts may need a cookies file. Set COOKIES_FILE in your .env.",
+    "groups": {
+      "video": "Video",
+      "social": "Social",
+      "audio": "Audio & music",
+      "learning": "Learning & archives",
+      "news": "News",
+      "live": "Live streaming"
+    },
+    "hints": {
+      "youtube": "Paste a YouTube video or playlist URL here…",
+      "facebook": "Paste a Facebook video or Reel URL here…",
+      "ok": "Paste an OK.ru video URL here…",
+      "twitter": "Paste an X (Twitter) post URL here…",
+      "tiktok": "Paste a TikTok video URL here…",
+      "instagram": "Paste an Instagram Reel or post URL here…",
+      "twitch": "Paste a Twitch VOD or clip URL here…",
+      "vk": "Paste a VK video URL here…",
+      "generic": "Paste any supported media URL here…"
+    }
+  },
+  "video": {
+    "convertTo": "Download as",
+    "convertOriginal": "Original — no re-encode",
+    "convertHint": "Conversions are transcoded by FFmpeg while the file streams, so they take longer than the original.",
+    "channel": "Channel",
+    "duration": "Duration",
+    "views": "Views",
+    "likes": "Likes",
+    "published": "Published",
+    "captions": "Captions available",
+    "noCaptions": "No captions",
+    "openOnYoutube": "Open on YouTube",
+    "preview": "Preview",
+    "formats": "Available formats",
+    "videoTab": "Video",
+    "audioTab": "Audio",
+    "quality": "Quality",
+    "size": "Size",
+    "codec": "Codec",
+    "fps": "FPS",
+    "bitrate": "Bitrate",
+    "download": "Download",
+    "downloading": "Preparing…",
+    "estimated": "approx.",
+    "merge": "Merged",
+    "mergeHint": "Video and audio are muxed together by FFmpeg while streaming.",
+    "progressive": "Single file",
+    "best": "Best",
+    "noFormats": "No downloadable formats were returned for this video.",
+    "studyCta": "Open in Study Mode",
+    "clipCta": "Cut a clip",
+    "openSource": "Open on {platform}"
+  },
+  "playlist": {
+    "heading": "Playlist",
+    "by": "by",
+    "videos": "{count} videos",
+    "totalDuration": "Total length",
+    "selectAll": "Select all",
+    "deselectAll": "Deselect all",
+    "selected": "{count} selected",
+    "qualityLabel": "Queue quality",
+    "formatLabel": "Queue format",
+    "startQueue": "Download selected",
+    "stopQueue": "Stop queue",
+    "clearQueue": "Clear queue",
+    "queueTitle": "Download queue",
+    "queueEmpty": "Nothing queued yet. Select videos above and start the queue.",
+    "nothingSelected": "Select at least one video first.",
+    "truncated": "Showing the first {count} videos of this playlist.",
+    "status": {
+      "pending": "Waiting",
+      "downloading": "Downloading",
+      "done": "Saved",
+      "failed": "Failed",
+      "skipped": "Skipped"
+    },
+    "subtitle": "Load a playlist, choose videos and download them as a queue.",
+    "unavailable": "Unavailable"
+  },
+  "study": {
+    "heading": "AI Study Mode",
+    "subtitle": "Captions — or, when a video has none, a local speech-to-text transcript — become a summary, key concepts and a quiz.",
+    "generate": "Generate study pack",
+    "generating": "Reading transcript…",
+    "regenerate": "Regenerate",
+    "providerLabel": "Generated by",
+    "provider": {
+      "offline": "Offline analyser",
+      "anthropic": "Claude"
+    },
+    "tabs": {
+      "summary": "Summary",
+      "concepts": "Key concepts",
+      "quiz": "Quiz",
+      "transcript": "Transcript"
+    },
+    "summaryTitle": "What this video covers",
+    "conceptsTitle": "Key concepts",
+    "conceptTakeaway": "Takeaway",
+    "quizTitle": "Test yourself",
+    "quizIntro": "{count} questions generated from the transcript.",
+    "quizStart": "Start quiz",
+    "quizNext": "Next question",
+    "quizPrev": "Previous",
+    "quizFinish": "See results",
+    "quizRestart": "Try again",
+    "quizProgress": "Question {current} of {total}",
+    "quizScore": "You scored {score} / {total}",
+    "quizCorrect": "Correct",
+    "quizWrong": "Not quite",
+    "quizAnswerWas": "Correct answer:",
+    "quizPerfect": "Flawless — you know this material.",
+    "quizGood": "Solid work. Review the missed concepts.",
+    "quizPoor": "Worth another pass through the summary.",
+    "transcriptTitle": "Interactive transcript",
+    "transcriptSearch": "Search the transcript…",
+    "transcriptHits": "{count} matches",
+    "chaptersTitle": "Chapters",
+    "noTranscript": "No transcript could be produced for this media.",
+    "langLabel": "Transcript language",
+    "autoCaptions": "Auto-generated",
+    "stats": {
+      "words": "Words",
+      "readingTime": "Reading time",
+      "segments": "Segments"
+    },
+    "jumpHint": "Click any line to jump the player there.",
+    "speech": {
+      "queued": "Preparing transcription…",
+      "downloading": "Fetching audio… {progress}%",
+      "transcribing": "Transcribing speech locally… {progress}%",
+      "note": "No captions found — the audio will be transcribed on this machine with Whisper ({model}).",
+      "unavailable": "No captions found, and local speech-to-text is not installed. Run npm run setup:whisper on the server.",
+      "truncated": "Only the first {minutes} minutes were transcribed.",
+      "source": "Transcribed locally with Whisper"
+    },
+    "thinNote": "This transcript is too short for key concepts or a quiz, so it is shown in full.",
+    "sourceCaptions": "From the caption track"
+  },
+  "clip": {
+    "gifOption": "GIF (animated, no audio)",
+    "gifFps": "GIF frame rate",
+    "heading": "FFmpeg Clip Studio",
+    "subtitle": "Trim a section, burn in a title, watermark, subtitles and a progress bar — rendered server-side by FFmpeg.",
+    "range": "Time range",
+    "start": "Start",
+    "end": "End",
+    "clipLength": "Clip length",
+    "useCurrent": "Use player position",
+    "options": "Render options",
+    "titleOverlay": "Title overlay",
+    "titleOverlayPlaceholder": "Text drawn at the top of the clip",
+    "progressBar": "Progress bar",
+    "progressBarHint": "Animated bar burned along the bottom edge.",
+    "watermark": "Watermark",
+    "watermarkPlaceholder": "e.g. @yourhandle",
+    "position": "Watermark position",
+    "positions": {
+      "tl": "Top left",
+      "tr": "Top right",
+      "bl": "Bottom left",
+      "br": "Bottom right"
+    },
+    "subtitles": "Burn in subtitles",
+    "subtitlesHint": "Uses the video's caption track; disabled when none exists.",
+    "quality": "Output quality",
+    "format": "Container",
+    "render": "Render clip",
+    "rendering": "Rendering…",
+    "cancel": "Cancel render",
+    "download": "Download clip",
+    "renderAnother": "Render another",
+    "stages": {
+      "queued": "Queued",
+      "downloading": "Fetching source streams",
+      "processing": "Encoding with FFmpeg",
+      "done": "Ready",
+      "failed": "Failed",
+      "canceled": "Canceled"
+    },
+    "errors": {
+      "range": "The end time must be after the start time.",
+      "tooLong": "Clips are limited to {max} to keep renders fast.",
+      "bounds": "The range must sit inside the video duration.",
+      "noVideo": "Load a video first."
+    },
+    "recent": "Recent clips",
+    "noClips": "No clips rendered yet.",
+    "delete": "Delete clip"
+  },
+  "history": {
+    "heading": "Download history",
+    "subtitle": "Completed downloads only, stored locally in SQLite.",
+    "empty": "Your download history is empty.",
+    "clear": "Clear history",
+    "confirmClear": "Delete every history entry? This cannot be undone.",
+    "remove": "Remove entry",
+    "again": "Download again",
+    "columns": {
+      "title": "Title",
+      "type": "Type",
+      "quality": "Quality",
+      "size": "Size",
+      "date": "Date",
+      "actions": "Actions"
+    },
+    "totals": "{count} downloads · {size} transferred"
+  },
+  "toast": {
+    "metaLoaded": "Video loaded",
+    "metaFailed": "Could not read that video",
+    "playlistLoaded": "Playlist loaded",
+    "playlistFailed": "Could not read that playlist",
+    "downloadStarted": "Download started",
+    "downloadFailed": "Download failed",
+    "queueFinished": "Queue finished — {done} saved, {failed} failed",
+    "studyReady": "Study pack ready",
+    "studyFailed": "Could not build the study pack",
+    "clipQueued": "Clip queued for rendering",
+    "clipDone": "Clip rendered",
+    "clipFailed": "Clip render failed",
+    "clipCanceled": "Render canceled",
+    "clipDeleted": "Clip deleted",
+    "historyCleared": "History cleared",
+    "entryRemoved": "Entry removed",
+    "copied": "Copied to clipboard",
+    "copyFailed": "Could not copy",
+    "languageChanged": "Language switched to {language}",
+    "themeLight": "Light theme enabled",
+    "themeDark": "Dark theme enabled",
+    "offline": "You appear to be offline",
+    "audioIdMatched": "Identified: {title}",
+    "audioIdNoMatch": "No match found",
+    "audioIdCleared": "List cleared",
+    "audioIdRemoved": "Removed"
+  },
+  "errors": {
+    "authRequired": "This post needs a signed-in account. Add a cookies file to reach it.",
+    "unsupportedSite": "The extraction engine does not support that site.",
+    "geoBlocked": "This media is blocked in the server's region.",
+    "needsCookies": "The site asked this server to prove it is not a bot. A cookies file usually fixes it.",
+    "transcode": "FFmpeg could not produce that format from this source.",
+    "engineMissing": "This platform needs yt-dlp, which is not installed on the server.",
+    "gifRange": "GIFs are cut from a time range — use the Clip Studio.",
+    "generic": "Something went wrong. Please try again.",
+    "network": "The server is unreachable.",
+    "invalidUrl": "Unsupported or malformed link.",
+    "notFound": "That video could not be found.",
+    "private": "This video is private or age-restricted.",
+    "live": "Live streams cannot be processed.",
+    "unavailable": "This video is unavailable in the server's region.",
+    "ffmpeg": "FFmpeg is not available on the server.",
+    "rateLimited": "YouTube is rate-limiting this server. Try again shortly.",
+    "tooLarge": "That request exceeds the configured limits.",
+    "busy": "The server is busy with another render.",
+    "blocked": "The site refused this server (HTTP 403). This is usually temporary bot protection — try again later.",
+    "speechFailed": "Speech transcription failed.",
+    "audioTooShort": "The recording is too short to identify.",
+    "audioUnreadable": "The recording could not be decoded.",
+    "recognitionLimited": "The recognition service's free limit has been reached. Add an API token or try again later.",
+    "recognitionFailed": "The recognition service is unavailable right now.",
+    "noSpeech": "No speech was detected in this media — it may be music or silence.",
+    "upstream": "The source site returned an error. Try again in a moment.",
+    "timeout": "The source took too long to respond.",
+    "noCaptions": "This media has no captions and no transcript could be produced."
+  },
+  "common": {
+    "close": "Close",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "retry": "Retry",
+    "loading": "Loading…",
+    "search": "Search",
+    "copy": "Copy link",
+    "open": "Open",
+    "delete": "Delete",
+    "all": "All",
+    "yes": "Yes",
+    "no": "No",
+    "optional": "optional",
+    "on": "On",
+    "off": "Off",
+    "unknown": "Unknown",
+    "auto": "Auto",
+    "beta": "Beta",
+    "second": "s",
+    "minute": "m",
+    "hour": "h"
+  },
+  "skeleton": {
+    "label": "Fetching metadata…"
+  },
+  "formatsSection": {
+    "title": "Supported formats",
+    "subtitle": "Every conversion runs through FFmpeg on your own machine. Pick the container your workflow actually wants.",
+    "audioTab": "Audio formats",
+    "videoTab": "Video formats",
+    "lossless": "Lossless",
+    "lossy": "Lossy",
+    "remux": "No re-encode",
+    "audio": {
+      "mp3": {
+        "name": "MP3",
+        "tagline": "Universal",
+        "desc": "Universal audio format compatible with virtually all media players."
+      },
+      "aac": {
+        "name": "AAC",
+        "tagline": "High efficiency",
+        "desc": "Standard high-efficiency audio encoding for modern devices."
+      },
+      "m4a": {
+        "name": "M4A",
+        "tagline": "AAC container",
+        "desc": "High-quality AAC audio container with optimal compression for Apple devices."
+      },
+      "alac": {
+        "name": "ALAC",
+        "tagline": "Lossless on Apple",
+        "desc": "Apple's lossless codec — studio-quality audio with native iOS and macOS support."
+      },
+      "flac": {
+        "name": "FLAC",
+        "tagline": "Lossless",
+        "desc": "Lossless audio format preserving 100% of original studio sound quality."
+      },
+      "wav": {
+        "name": "WAV",
+        "tagline": "Uncompressed",
+        "desc": "Uncompressed PCM audio for professional audio editing software."
+      },
+      "opus": {
+        "name": "Opus",
+        "tagline": "Low latency",
+        "desc": "Ultra-efficient low-latency audio codec designed for web streaming."
+      },
+      "ogg": {
+        "name": "OGG",
+        "tagline": "Open source",
+        "desc": "Open-source audio container formatted for web applications and games."
+      }
+    },
+    "video": {
+      "mp4": {
+        "name": "MP4",
+        "tagline": "H.264",
+        "desc": "Industry-standard video container supported across all devices."
+      },
+      "mkv": {
+        "name": "MKV",
+        "tagline": "Matroska",
+        "desc": "Versatile container supporting multi-track audio, subtitles, and lossless remuxing."
+      },
+      "webm": {
+        "name": "WebM",
+        "tagline": "HTML5",
+        "desc": "Modern web video format optimized for fast HTML5 streaming."
+      },
+      "mov": {
+        "name": "MOV",
+        "tagline": "QuickTime",
+        "desc": "High-bitrate Apple QuickTime format tailored for video editing workflows."
+      },
+      "avi": {
+        "name": "AVI",
+        "tagline": "Legacy",
+        "desc": "Legacy video format ensuring compatibility with older hardware."
+      },
+      "flv": {
+        "name": "FLV",
+        "tagline": "Flash",
+        "desc": "Flash video container for legacy video streams."
+      },
+      "gif": {
+        "name": "GIF",
+        "tagline": "Animated",
+        "desc": "Soundless looping animated sequence for social sharing."
+      }
+    }
+  },
+  "footer": {
+    "brand": "TubeForge Media Engine",
+    "powered": "Powered by FFmpeg & SQLite",
+    "license": "For personal and open-license content processing only.",
+    "copyright": "© {year} TubeForge"
+  },
+  "a11y": {
+    "scrollTop": "Back to top",
+    "choosePlatform": "Choose a platform",
+    "moreSites": "Show more supported sites",
+    "skipToContent": "Skip to main content",
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "toggleTheme": "Toggle colour theme",
+    "selectLanguage": "Select interface language",
+    "playVideo": "Play video preview",
+    "closeModal": "Close dialog",
+    "selectVideo": "Select this video",
+    "renderProgress": "Render progress",
+    "downloadProgress": "Download progress",
+    "listen": "Start listening"
+  },
+  "tools": {
+    "load": "Load",
+    "loading": "Loading…",
+    "placeholderStudy": "Paste a video or audio link to study…",
+    "placeholderClip": "Paste a video link to clip…",
+    "placeholderPlaylist": "Paste a playlist link…",
+    "hintStudy": "Captions are used when available; otherwise the audio is transcribed on this machine.",
+    "hintClip": "Pick a range, add overlays, and FFmpeg renders it on the server.",
+    "hintPlaylist": "YouTube playlists — including links copied from a video that is playing inside a playlist."
+  },
+  "audioId": {
+    "title": "Audio ID",
+    "subtitle": "Identify a song from your microphone or from audio playing on this computer, then jump straight to it.",
+    "listen": "Tap to listen",
+    "listening": "Listening… {seconds}s",
+    "identifying": "Identifying…",
+    "stop": "Stop",
+    "sourceLabel": "Listen to",
+    "sources": {
+      "mic": "Microphone",
+      "system": "System audio",
+      "both": "Both"
+    },
+    "sourceHints": {
+      "mic": "Hold your device near the speaker.",
+      "system": "Your browser will ask which tab or screen to share — tick “Share audio”.",
+      "both": "Mixes the microphone with shared system audio."
+    },
+    "noMatch": "No match. Try a louder or longer part of the song.",
+    "matched": "Match found",
+    "recent": "Recently identified",
+    "empty": "Nothing identified yet.",
+    "clear": "Clear list",
+    "confirmClear": "Remove every identified track?",
+    "open": "Open in TubeForge",
+    "youtube": "YouTube",
+    "spotify": "Spotify",
+    "apple": "Apple Music",
+    "songLink": "All platforms",
+    "keyless": "Using AudD's free keyless tier — set AUDD_API_TOKEN for higher limits.",
+    "level": "Input level",
+    "remove": "Remove",
+    "via": "via {provider}",
+    "errors": {
+      "insecure": "Audio capture needs HTTPS or localhost. Open TubeForge at http://localhost:3000 on this machine.",
+      "unsupported": "This browser cannot record audio.",
+      "denied": "Access to the audio input was denied.",
+      "noSystemAudio": "No audio was shared. In the share dialog, tick “Share tab audio” or “Share system audio”.",
+      "systemUnsupported": "This browser cannot capture system audio. Use Chrome or Edge, or choose Microphone.",
+      "silent": "Nothing was heard — the input was silent."
+    }
+  }
+}

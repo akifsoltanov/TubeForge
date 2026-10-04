@@ -1,0 +1,28 @@
+node_modules/
+data/*.db
+data/*.db-journal
+data/*.db-wal
+data/*.db-shm
+storage/clips/*
+storage/tmp/*
+!storage/clips/.gitkeep
+!storage/tmp/.gitkeep
+.env
+cookies.json
+cookies.txt
+npm-debug.log*
+.DS_Store
+
+# Vendored yt-dlp binary (run `npm run setup:ytdlp` to fetch it)
+bin/yt-dlp
+bin/yt-dlp.exe
+
+# Local speech-to-text (run `npm run setup:whisper` to build/fetch these)
+bin/whisper-cli
+bin/whisper-cli.exe
+vendor/
+models/
+
+# ytdl-core debug dumps
+*-player-script.js
+.backups/
