@@ -1,0 +1,1283 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="description"
+    content="Download, convert and clip media from over a thousand sites, turn talks into study material, and identify songs — all processed on your own machine." />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" content="#0b0d17" />
+  <title>TubeForge — Download. Study. Clip.</title>
+  <link rel="preconnect" href="https://i.ytimg.com" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skipToContent">Skip to main content</a>
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="pi-youtube" viewBox="0 0 24 24">
+      <rect x="2" y="5" width="20" height="14" rx="4" />
+      <path d="m10 9 5 3-5 3V9Z" />
+    </symbol>
+    <symbol id="pi-facebook" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M14.5 8.5H13a1.5 1.5 0 0 0-1.5 1.5v11M9.5 13h5" />
+    </symbol>
+    <symbol id="pi-ok" viewBox="0 0 24 24">
+      <circle cx="12" cy="7" r="3.2" />
+      <path d="M7.5 13.2a7 7 0 0 0 9 0M9.2 20.5 12 16.4l2.8 4.1" />
+    </symbol>
+    <symbol id="pi-twitter" viewBox="0 0 24 24">
+      <path d="M4 4l16 16M20 4 4 20" />
+    </symbol>
+    <symbol id="pi-tiktok" viewBox="0 0 24 24">
+      <path d="M14 4v11a3.5 3.5 0 1 1-3.5-3.5" />
+      <path d="M14 4a5 5 0 0 0 5 5" />
+    </symbol>
+    <symbol id="pi-instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <circle cx="17" cy="7" r="1" />
+    </symbol>
+    <symbol id="pi-twitch" viewBox="0 0 24 24">
+      <path d="M4 3h16v11l-4 4h-4l-3 3H7v-3H4Z" />
+      <path d="M11 8v4M15 8v4" />
+    </symbol>
+    <symbol id="pi-vk" viewBox="0 0 24 24">
+      <path
+        d="M3 8h3c.6 4 2.6 6.6 4 6.6V8h3v4c1.6-.3 3.2-2.2 3.8-4H21c-.6 2.4-2 4.4-3.4 5.4 1.4.9 2.7 2.4 3.4 4.6h-3.4c-.6-1.7-1.9-3.1-3.6-3.4V18h-.6C7.7 18 4.3 13.9 3 8Z" />
+    </symbol>
+    <symbol id="pi-generic" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18" />
+    </symbol>
+    <symbol id="pi-more" viewBox="0 0 24 24">
+      <circle cx="5" cy="12" r="1.6" />
+      <circle cx="12" cy="12" r="1.6" />
+      <circle cx="19" cy="12" r="1.6" />
+    </symbol>
+
+    <symbol id="ic-download" viewBox="0 0 24 24">
+      <path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2" />
+    </symbol>
+    <symbol id="ic-playlist" viewBox="0 0 24 24">
+      <path d="M3 6h13M3 12h13M3 18h8m8-7v8m0 0a2 2 0 1 1-2-2 2 2 0 0 1 2 2Zm0-8 3-1" />
+    </symbol>
+    <symbol id="ic-study" viewBox="0 0 24 24">
+      <path d="M4 5a2 2 0 0 1 2-2h11v16H6a2 2 0 0 0-2 2Zm0 0v14m13-16v18" />
+    </symbol>
+    <symbol id="ic-clip" viewBox="0 0 24 24">
+      <circle cx="6" cy="6" r="3" />
+      <circle cx="6" cy="18" r="3" />
+      <path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12" />
+    </symbol>
+    <symbol id="ic-audioid" viewBox="0 0 24 24">
+      <path d="M3 12h2m3-5v10m4-13v16m4-11v6m4-3h1" />
+    </symbol>
+    <symbol id="ic-history" viewBox="0 0 24 24">
+      <path d="M12 8v4l3 2m6-2a9 9 0 1 1-9-9" />
+      <path d="M3 5v4h4" />
+    </symbol>
+    <symbol id="ic-link" viewBox="0 0 24 24">
+      <path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7" />
+      <path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7" />
+    </symbol>
+    <symbol id="ic-paste" viewBox="0 0 24 24">
+      <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
+      <rect x="9" y="3" width="6" height="4" rx="1" />
+    </symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24">
+      <path d="m5 13 4 4L19 7" />
+    </symbol>
+    <symbol id="ic-close" viewBox="0 0 24 24">
+      <path d="M18 6 6 18M6 6l12 12" />
+    </symbol>
+    <symbol id="ic-external" viewBox="0 0 24 24">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+      <path d="M15 3h6v6M10 14 21 3" />
+    </symbol>
+    <symbol id="ic-trash" viewBox="0 0 24 24">
+      <path d="M3 6h18M8 6V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v2m2 0v14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V6" />
+    </symbol>
+    <symbol id="ic-warn" viewBox="0 0 24 24">
+      <path d="M12 9v4m0 4h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" />
+    </symbol>
+    <symbol id="ic-info" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M12 16v-5m0-4h.01" />
+    </symbol>
+    <symbol id="ic-mic" viewBox="0 0 24 24">
+      <rect x="9" y="3" width="6" height="11" rx="3" />
+      <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+    </symbol>
+    <symbol id="ic-monitor" viewBox="0 0 24 24">
+      <rect x="3" y="4" width="18" height="12" rx="2" />
+      <path d="M8 20h8m-4-4v4" />
+    </symbol>
+    <symbol id="ic-both" viewBox="0 0 24 24">
+      <rect x="2" y="4" width="13" height="9" rx="1.6" />
+      <path d="M6 17h5m-2.5-4v4" />
+      <rect x="17" y="6" width="4" height="8" rx="2" />
+      <path d="M15.5 13a3.5 3.5 0 0 0 7 0M19 16.5V19" />
+    </symbol>
+    <symbol id="ic-note" viewBox="0 0 24 24">
+      <path d="M9 18V5l12-2v13" />
+      <circle cx="6" cy="18" r="3" />
+      <circle cx="18" cy="16" r="3" />
+    </symbol>
+    <symbol id="ic-film" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M7 3v18M17 3v18M3 7.5h4m10 0h4M3 12h18M3 16.5h4m10 0h4" />
+    </symbol>
+    <symbol id="ic-wave" viewBox="0 0 24 24">
+      <path d="M2 12h2l2-5 3 10 3-14 3 16 3-11 2 4h2" />
+    </symbol>
+    <symbol id="ic-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" />
+      <path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18" />
+    </symbol>
+    <symbol id="ic-lang" viewBox="0 0 24 24">
+      <path d="M4 5h9M8.5 3v2m2.5 0c-.8 4.6-3.6 8-7 9.5m2-6c1.2 2.6 3.2 4.6 6 5.5" />
+      <path d="m13 21 4-9 4 9m-6.8-3h5.6" />
+    </symbol>
+  </svg>
+
+  <div class="aurora" aria-hidden="true">
+    <span class="aurora__blob aurora__blob--1"></span>
+    <span class="aurora__blob aurora__blob--2"></span>
+    <span class="aurora__blob aurora__blob--3"></span>
+    <span class="aurora__grid"></span>
+  </div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="shell site-header__inner">
+      <a class="brand" href="#/downloader" data-action="go-home">
+        <span class="brand__mark" aria-hidden="true" onclick="location.reload()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"></path>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <strong data-i18n="app.name">TubeForge</strong>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#/downloader" data-nav="downloader" data-i18n="nav.downloader">Downloader</a>
+        <a class="nav__link" href="#/playlist" data-nav="playlist" data-i18n="nav.playlist">Playlist</a>
+        <a class="nav__link" href="#/study" data-nav="study" data-i18n="nav.study">Study Mode</a>
+        <a class="nav__link" href="#/clips" data-nav="clips" data-i18n="nav.clips">Clip Studio</a>
+        <a class="nav__link" href="#/audioid" data-nav="audioid" data-i18n="nav.audioId">Audio ID</a>
+        <a class="nav__link" href="#/history" data-nav="history" data-i18n="nav.history">History</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" id="langSwitch">
+          <button class="icon-btn lang-switch__toggle" type="button" id="langToggle" aria-haspopup="listbox"
+            aria-expanded="false" aria-controls="langMenu" data-i18n-attr="aria-label:a11y.selectLanguage"
+            aria-label="Select interface language">
+            <span class="flag" id="langFlag" aria-hidden="true"></span>
+            <span class="lang-switch__code" id="langCode">EN</span>
+            <svg class="chev" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <ul class="lang-switch__menu" id="langMenu" role="listbox" data-i18n-attr="aria-label:nav.language" hidden>
+          </ul>
+        </div>
+
+        <button class="icon-btn" type="button" id="themeToggle" data-i18n-attr="aria-label:a11y.toggleTheme"
+          aria-label="Toggle colour theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+          </svg>
+        </button>
+
+        <button class="icon-btn menu-btn" type="button" id="drawerToggle" aria-expanded="false" aria-controls="drawer"
+          data-i18n-attr="aria-label:a11y.openMenu" aria-label="Open navigation menu">
+          <span class="menu-btn__bar"></span>
+          <span class="menu-btn__bar"></span>
+          <span class="menu-btn__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+  <aside class="drawer" id="drawer" hidden aria-label="Mobile navigation">
+    <div class="drawer__head">
+      <span class="drawer__title" data-i18n="nav.menu">Menu</span>
+      <button class="icon-btn" type="button" id="drawerClose" data-i18n-attr="aria-label:a11y.closeMenu"
+        aria-label="Close navigation menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#ic-close" />
+        </svg>
+      </button>
+    </div>
+    <nav class="drawer__nav" aria-label="Mobile">
+      <a class="drawer__link" href="#/downloader" data-nav="downloader">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#ic-download" />
+        </svg>
+        <span data-i18n="nav.downloader">Downloader</span>
+      </a>
+      <a class="drawer__link" href="#/playlist" data-nav="playlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#ic-playlist" />
+        </svg>
+        <span data-i18n="nav.playlist">Playlist</span>
+      </a>
+      <a class="drawer__link" href="#/study" data-nav="study">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#ic-study" />
+        </svg>
+        <span data-i18n="nav.study">Study Mode</span>
+      </a>
+      <a class="drawer__link" href="#/clips" data-nav="clips">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#ic-clip" />
+        </svg>
+        <span data-i18n="nav.clips">Clip Studio</span>
+      </a>
+      <a class="drawer__link" href="#/audioid" data-nav="audioid">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#ic-audioid" />
+        </svg>
+        <span data-i18n="nav.audioId">Audio ID</span>
+      </a>
+      <a class="drawer__link" href="#/history" data-nav="history">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#ic-history" />
+        </svg>
+        <span data-i18n="nav.history">History</span>
+      </a>
+    </nav>
+    <div class="drawer__foot">
+      <p>
+        <strong data-i18n="footer.brand">TubeForge Media Engine</strong><br />
+        <span data-i18n="footer.powered">Powered by FFmpeg &amp; SQLite</span>
+      </p>
+    </div>
+  </aside>
+
+  <main id="main" class="shell">
+
+    <section class="view" data-view="downloader" id="viewDownloader">
+      <div class="hero" id="hero">
+        <h1 class="hero__title">
+          <span data-i18n="hero.title">Your content, your rules,</span>
+          <span class="gradient-text" data-i18n="hero.titleAccent">Everything on social media, on your terms.</span>
+        </h1>
+
+        <form class="url-form" id="urlForm" autocomplete="off" novalidate>
+          <div class="url-form__field" id="urlField">
+            <svg class="url-form__icon" viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#ic-link" />
+            </svg>
+            <input class="url-form__input" id="urlInput" type="url" inputmode="url" spellcheck="false"
+              data-i18n-attr="placeholder:hero.placeholder;aria-label:hero.placeholder"
+              placeholder="https://www.youtube.com/watch?v=…" aria-describedby="urlHint" />
+            <button class="url-form__clear" type="button" id="urlClear" hidden data-i18n-attr="aria-label:hero.clear"
+              aria-label="Clear input">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#ic-close" />
+              </svg>
+            </button>
+            <button class="btn btn--ghost url-form__paste" type="button" id="pasteBtn"
+              data-i18n-attr="aria-label:hero.paste;title:hero.paste" aria-label="Paste from clipboard">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#ic-paste" />
+              </svg>
+            </button>
+            <button class="btn btn--primary url-form__submit" type="submit" id="analyzeBtn">
+              <span class="btn__label" data-i18n="hero.analyze">Search</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+          <p class="url-form__hint" id="urlHint" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="platform-bar" id="platformBar" role="group" data-i18n-attr="aria-label:a11y.choosePlatform"
+          aria-label="Choose a platform">
+          <span class="platform-bar__label" data-i18n="platforms.label">Choose a platform</span>
+          <div class="platform-bar__chips" id="platformChips"></div>
+          <p class="platform-bar__note" id="platformNote" hidden></p>
+        </div>
+
+        <ul class="metrics" id="metrics">
+          <li class="metric glass">
+            <span class="metric__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#ic-film" />
+              </svg>
+            </span>
+            <span class="metric__value" data-metric="videoFormats">—</span>
+            <span class="metric__label" data-i18n="hero.stats.videoFormats">Video Formats</span>
+          </li>
+          <li class="metric glass">
+            <span class="metric__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#ic-note" />
+              </svg>
+            </span>
+            <span class="metric__value" data-metric="audioFormats">—</span>
+            <span class="metric__label" data-i18n="hero.stats.audioFormats">Audio Formats</span>
+          </li>
+          <li class="metric glass">
+            <span class="metric__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#ic-lang" />
+              </svg>
+            </span>
+            <span class="metric__value" data-metric="languages">—</span>
+            <span class="metric__label" data-i18n="hero.stats.languages">Interface Languages</span>
+            <span class="metric__flags" id="metricFlags" aria-hidden="true"></span>
+          </li>
+          <li class="metric glass" data-i18n-attr="title:hero.stats.platformsHint">
+            <span class="metric__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#ic-globe" />
+              </svg>
+            </span>
+            <span class="metric__value" data-metric="platforms">—</span>
+            <span class="metric__label" data-i18n="hero.stats.platforms">Supported Platforms</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="panel skeleton-panel" id="panelSkeleton" hidden aria-live="polite" aria-busy="true">
+        <p class="sr-only" data-i18n="skeleton.label">Fetching metadata…</p>
+        <div class="skeleton-card glass">
+          <div class="sk sk--thumb"></div>
+          <div class="skeleton-card__body">
+            <div class="sk sk--line sk--w80"></div>
+            <div class="sk sk--line sk--w50"></div>
+            <div class="sk sk--chips">
+              <span class="sk sk--chip"></span><span class="sk sk--chip"></span><span class="sk sk--chip"></span>
+            </div>
+          </div>
+        </div>
+        <div class="skeleton-grid">
+          <div class="sk sk--row"></div>
+          <div class="sk sk--row"></div>
+          <div class="sk sk--row"></div>
+          <div class="sk sk--row"></div>
+        </div>
+      </div>
+
+      <div class="panel workspace" id="panelVideo" hidden>
+        <article class="video-card glass">
+          <button class="video-card__thumb" type="button" id="videoThumb" data-i18n-attr="aria-label:a11y.playVideo"
+            aria-label="Play video preview">
+            <img id="videoThumbImg" alt="" loading="lazy" decoding="async" />
+            <span class="video-card__play" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="m9 17 8-5-8-5v10Z" />
+              </svg>
+            </span>
+            <span class="video-card__duration" id="videoDuration">0:00</span>
+          </button>
+
+          <div class="video-card__body">
+            <h2 class="video-card__title" id="videoTitle"></h2>
+            <div class="video-card__meta" id="videoMeta"></div>
+            <div class="video-card__actions">
+              <a class="btn btn--ghost btn--sm" id="videoSourceLink" href="#" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#ic-external" />
+                </svg>
+                <span id="videoSourceLabel">Open on YouTube</span>
+              </a>
+              <button class="btn btn--ghost btn--sm" type="button" data-action="copy-url">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="9" y="9" width="12" height="12" rx="2" />
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                </svg>
+                <span data-i18n="common.copy">Copy link</span>
+              </button>
+              <a class="btn btn--soft btn--sm" href="#/study" data-action="to-study">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#ic-study" />
+                </svg>
+                <span data-i18n="video.studyCta">Open in Study Mode</span>
+              </a>
+              <a class="btn btn--soft btn--sm" href="#/clips" data-action="to-clip">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#ic-clip" />
+                </svg>
+                <span data-i18n="video.clipCta">Cut a clip</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <div class="media-pane glass">
+          <div class="media-toolbar">
+            <div class="segmented" role="tablist" data-i18n-attr="aria-label:video.formats">
+              <button class="segmented__btn is-active" type="button" role="tab" aria-selected="true"
+                data-formats="video">
+                <span data-i18n="video.videoTab">Video</span>
+                <span class="count" id="countVideo">0</span>
+              </button>
+              <button class="segmented__btn" type="button" role="tab" aria-selected="false" data-formats="audio">
+                <span data-i18n="video.audioTab">Audio</span>
+                <span class="count" id="countAudio">0</span>
+              </button>
+            </div>
+            <label class="field field--inline convert-picker">
+              <span data-i18n="video.convertTo">Download as</span>
+              <select class="select" id="convertTarget"></select>
+            </label>
+          </div>
+          <div class="format-list" id="formatList"></div>
+          <p class="muted small" id="formatNote"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" data-view="playlist" id="viewPlaylist" hidden>
+      <header class="view-head">
+        <span class="view-head__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <use href="#ic-playlist" />
+          </svg>
+        </span>
+        <div>
+          <h1 class="view-head__title" data-i18n="playlist.heading">Playlist</h1>
+          <p class="view-head__subtitle" data-i18n="playlist.subtitle">
+            Load a playlist, choose videos and download them as a queue.
+          </p>
+        </div>
+      </header>
+
+      <form class="tool-form" id="playlistForm" autocomplete="off" novalidate>
+        <div class="tool-form__field">
+          <svg class="tool-form__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#ic-link" />
+          </svg>
+          <input class="tool-form__input" type="url" inputmode="url" spellcheck="false"
+            data-i18n-attr="placeholder:tools.placeholderPlaylist;aria-label:tools.placeholderPlaylist"
+            placeholder="Paste a playlist link…" />
+          <button class="icon-btn tool-form__paste" type="button"
+            data-i18n-attr="aria-label:hero.paste;title:hero.paste" aria-label="Paste from clipboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#ic-paste" />
+            </svg>
+          </button>
+          <button class="btn btn--primary tool-form__submit" type="submit">
+            <span class="btn__label" data-i18n="tools.load">Load</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+        <p class="tool-form__hint" role="status" aria-live="polite" data-hint="tools.hintPlaylist"></p>
+      </form>
+
+      <div class="skeleton-grid tool-skeleton" id="playlistSkeleton" hidden aria-busy="true">
+        <div class="sk sk--row"></div>
+        <div class="sk sk--row"></div>
+        <div class="sk sk--row"></div>
+        <div class="sk sk--row"></div>
+        <div class="sk sk--row"></div>
+      </div>
+
+      <div class="panel" id="panelPlaylist" hidden>
+        <article class="playlist-head glass">
+          <img class="playlist-head__thumb" id="playlistThumb" alt="" loading="lazy" decoding="async" />
+          <div class="playlist-head__body">
+            <h2 id="playlistTitle"></h2>
+            <p class="muted" id="playlistMeta"></p>
+            <p class="notice notice--info small" id="playlistTruncated" hidden></p>
+          </div>
+        </article>
+
+        <div class="playlist-toolbar glass">
+          <div class="playlist-toolbar__group">
+            <button class="btn btn--ghost btn--sm" type="button" id="selectAll" data-i18n="playlist.selectAll">Select
+              all</button>
+            <button class="btn btn--ghost btn--sm" type="button" id="deselectAll"
+              data-i18n="playlist.deselectAll">Deselect all</button>
+            <span class="pill pill--soft" id="selectedCount">0</span>
+          </div>
+          <div class="playlist-toolbar__group">
+            <label class="field field--inline">
+              <span data-i18n="playlist.qualityLabel">Queue quality</span>
+              <select class="select" id="queueQuality">
+                <option value="1080">1080p</option>
+                <option value="720" selected>720p</option>
+                <option value="480">480p</option>
+                <option value="360">360p</option>
+                <option value="audio">MP3 320</option>
+              </select>
+            </label>
+            <button class="btn btn--primary" type="button" id="queueStart" data-i18n="playlist.startQueue">Download
+              selected</button>
+            <button class="btn btn--danger" type="button" id="queueStop" hidden data-i18n="playlist.stopQueue">Stop
+              queue</button>
+          </div>
+        </div>
+
+        <div class="playlist-grid">
+          <div class="playlist-items" id="playlistItems"></div>
+          <aside class="queue glass">
+            <div class="queue__head">
+              <h4 data-i18n="playlist.queueTitle">Download queue</h4>
+              <button class="btn btn--ghost btn--sm" type="button" id="queueClear" data-i18n="playlist.clearQueue">Clear
+                queue</button>
+            </div>
+            <div class="queue__list" id="queueList"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" data-view="study" id="viewStudy" hidden>
+      <header class="view-head">
+        <span class="view-head__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <use href="#ic-study" />
+          </svg>
+        </span>
+        <div>
+          <h1 class="view-head__title" data-i18n="study.heading">AI Study Mode</h1>
+          <p class="view-head__subtitle" data-i18n="study.subtitle">
+            Captions — or a local speech-to-text transcript — become a summary, key concepts and a quiz.
+          </p>
+        </div>
+      </header>
+
+      <form class="tool-form" id="studyForm" autocomplete="off" novalidate>
+        <div class="tool-form__field">
+          <svg class="tool-form__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#ic-link" />
+          </svg>
+          <input class="tool-form__input" type="url" inputmode="url" spellcheck="false"
+            data-i18n-attr="placeholder:tools.placeholderStudy;aria-label:tools.placeholderStudy"
+            placeholder="Paste a video or audio link to study…" />
+          <button class="icon-btn tool-form__paste" type="button"
+            data-i18n-attr="aria-label:hero.paste;title:hero.paste" aria-label="Paste from clipboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#ic-paste" />
+            </svg>
+          </button>
+          <button class="btn btn--primary tool-form__submit" type="submit">
+            <span class="btn__label" data-i18n="tools.load">Load</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+        <p class="tool-form__hint" role="status" aria-live="polite" data-hint="tools.hintStudy"></p>
+      </form>
+
+      <ul class="capabilities" data-for="study">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 6h16M4 12h10M4 18h13" />
+          </svg><span data-i18n="study.tabs.summary">Summary</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3 3 8l9 5 9-5-9-5Zm-9 9 9 5 9-5M3 16l9 5 9-5" />
+          </svg><span data-i18n="study.tabs.concepts">Key concepts</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9" />
+          </svg><span data-i18n="study.tabs.quiz">Quiz</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#ic-wave" />
+          </svg><span data-i18n="study.tabs.transcript">Transcript</span></li>
+      </ul>
+
+      <div class="tool-skeleton" id="studySkeleton" hidden aria-busy="true">
+        <div class="skeleton-card glass">
+          <div class="sk sk--thumb"></div>
+          <div class="skeleton-card__body">
+            <div class="sk sk--line sk--w80"></div>
+            <div class="sk sk--line sk--w50"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-workspace" id="studyWorkspace" hidden>
+        <article class="media-strip glass" data-strip>
+          <img class="media-strip__thumb" alt="" loading="lazy" decoding="async" />
+          <div class="media-strip__body">
+            <h2 class="media-strip__title"></h2>
+            <p class="media-strip__meta"></p>
+          </div>
+          <span class="pill media-strip__badge"></span>
+        </article>
+
+        <div class="study-intro glass" id="studyIntro">
+          <div class="study-intro__text">
+            <p class="study-intro__source" id="studySourceNote"></p>
+          </div>
+          <div class="study-intro__actions">
+            <label class="field field--inline" id="studyLangField" hidden>
+              <span data-i18n="study.langLabel">Transcript language</span>
+              <select id="studyLang" class="select"></select>
+            </label>
+            <button class="btn btn--primary" type="button" id="studyGenerate">
+              <span class="btn__label" data-i18n="study.generate">Generate study pack</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+        </div>
+
+        <div class="speech-progress glass" id="studyProgress" hidden aria-live="polite">
+          <div class="speech-progress__head">
+            <span class="speech-progress__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <use href="#ic-wave" />
+              </svg>
+            </span>
+            <strong id="studyProgressLabel"></strong>
+            <span class="speech-progress__pct" id="studyProgressPct">0%</span>
+          </div>
+          <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+            data-i18n-attr="aria-label:study.generating">
+            <span class="progress__bar" id="studyProgressBar"></span>
+          </div>
+          <p class="muted small" id="studyProgressNote"></p>
+        </div>
+
+        <div class="notice notice--warn" id="studyNotice" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#ic-warn" />
+          </svg>
+          <span id="studyNoticeText"></span>
+        </div>
+
+        <div class="study-body" id="studyBody" hidden>
+          <div class="study-meta">
+            <span class="pill" id="studyProvider"></span>
+            <span class="pill pill--soft" id="studySource"></span>
+            <span class="pill pill--soft" id="studyWords"></span>
+            <span class="pill pill--soft" id="studyReading"></span>
+            <button class="btn btn--ghost btn--sm" type="button" id="studyRegenerate">
+              <span class="btn__label" data-i18n="study.regenerate">Regenerate</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+
+          <p class="notice notice--info small" id="studyThin" hidden data-i18n="study.thinNote"></p>
+          <p class="notice notice--info small" id="studyTruncated" hidden></p>
+
+          <div class="study-layout">
+            <div class="study-main">
+              <div class="segmented segmented--wrap" role="tablist" data-i18n-attr="aria-label:nav.study">
+                <button class="segmented__btn is-active" type="button" role="tab" aria-selected="true"
+                  data-study="summary" data-i18n="study.tabs.summary">Summary</button>
+                <button class="segmented__btn" type="button" role="tab" aria-selected="false" data-study="concepts"
+                  data-i18n="study.tabs.concepts">Key concepts</button>
+                <button class="segmented__btn" type="button" role="tab" aria-selected="false" data-study="quiz"
+                  data-i18n="study.tabs.quiz">Quiz</button>
+                <button class="segmented__btn" type="button" role="tab" aria-selected="false" data-study="transcript"
+                  data-i18n="study.tabs.transcript">Transcript</button>
+              </div>
+
+              <div class="study-pane is-active" data-study-pane="summary">
+                <h4 data-i18n="study.summaryTitle">What this video covers</h4>
+                <ul class="summary-list" id="summaryList"></ul>
+              </div>
+
+              <div class="study-pane" data-study-pane="concepts" hidden>
+                <h4 data-i18n="study.conceptsTitle">Key concepts</h4>
+                <div class="concept-grid" id="conceptGrid"></div>
+              </div>
+
+              <div class="study-pane" data-study-pane="quiz" hidden>
+                <div class="quiz" id="quiz"></div>
+              </div>
+
+              <div class="study-pane" data-study-pane="transcript" hidden>
+                <div class="transcript-head">
+                  <h4 data-i18n="study.transcriptTitle">Interactive transcript</h4>
+                  <label class="field field--search">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <circle cx="11" cy="11" r="7" />
+                      <path d="m20 20-3.5-3.5" />
+                    </svg>
+                    <input type="search" id="transcriptSearch" class="input"
+                      data-i18n-attr="placeholder:study.transcriptSearch;aria-label:study.transcriptSearch"
+                      placeholder="Search the transcript…" />
+                  </label>
+                </div>
+                <p class="muted small" id="transcriptHits"></p>
+                <ol class="transcript" id="transcript"></ol>
+              </div>
+            </div>
+
+            <aside class="study-side">
+              <div class="player-shell glass">
+                <div class="player-frame" id="studyPlayer"></div>
+                <p class="muted small" data-i18n="study.jumpHint">Click any line to jump the player there.</p>
+              </div>
+              <div class="chapters glass" id="chaptersBox" hidden>
+                <h4 data-i18n="study.chaptersTitle">Chapters</h4>
+                <ol class="chapters__list" id="chaptersList"></ol>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" data-view="clips" id="viewClips" hidden>
+      <header class="view-head">
+        <span class="view-head__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <use href="#ic-clip" />
+          </svg>
+        </span>
+        <div>
+          <h1 class="view-head__title" data-i18n="clip.heading">FFmpeg Clip Studio</h1>
+          <p class="view-head__subtitle" data-i18n="clip.subtitle">
+            Trim a section, burn in a title, watermark, subtitles and a progress bar — rendered server-side by FFmpeg.
+          </p>
+        </div>
+      </header>
+
+      <form class="tool-form" id="clipForm" autocomplete="off" novalidate>
+        <div class="tool-form__field">
+          <svg class="tool-form__icon" viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#ic-link" />
+          </svg>
+          <input class="tool-form__input" type="url" inputmode="url" spellcheck="false"
+            data-i18n-attr="placeholder:tools.placeholderClip;aria-label:tools.placeholderClip"
+            placeholder="Paste a video link to clip…" />
+          <button class="icon-btn tool-form__paste" type="button"
+            data-i18n-attr="aria-label:hero.paste;title:hero.paste" aria-label="Paste from clipboard">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <use href="#ic-paste" />
+            </svg>
+          </button>
+          <button class="btn btn--primary tool-form__submit" type="submit">
+            <span class="btn__label" data-i18n="tools.load">Load</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+        <p class="tool-form__hint" role="status" aria-live="polite" data-hint="tools.hintClip"></p>
+      </form>
+
+      <ul class="capabilities" data-for="clips">
+        <li><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 7v5l3 2" />
+            <circle cx="12" cy="12" r="9" />
+          </svg><span data-i18n="clip.range">Time range</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 7V5h16v2M9 19h6M12 5v14" />
+          </svg><span data-i18n="clip.titleOverlay">Title overlay</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 3a9 9 0 1 0 9 9M16 3h5v5M21 3l-7 7" />
+          </svg><span data-i18n="clip.watermark">Watermark</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="14" width="18" height="4" rx="2" />
+            <path d="M3 16h10" />
+          </svg><span data-i18n="clip.progressBar">Progress bar</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2" />
+            <path d="M7 15h4m2 0h4" />
+          </svg><span data-i18n="clip.subtitles">Burn in subtitles</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#ic-film" />
+          </svg><span>MP4 · WebM · MKV · MOV · GIF</span></li>
+      </ul>
+
+      <div class="tool-skeleton" id="clipSkeleton" hidden aria-busy="true">
+        <div class="skeleton-card glass">
+          <div class="sk sk--thumb"></div>
+          <div class="skeleton-card__body">
+            <div class="sk sk--line sk--w80"></div>
+            <div class="sk sk--line sk--w50"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tool-workspace" id="clipWorkspace" hidden>
+        <article class="media-strip glass" data-strip>
+          <img class="media-strip__thumb" alt="" loading="lazy" decoding="async" />
+          <div class="media-strip__body">
+            <h2 class="media-strip__title"></h2>
+            <p class="media-strip__meta"></p>
+          </div>
+          <span class="pill media-strip__badge"></span>
+        </article>
+
+        <div class="clip-layout">
+          <div class="clip-main glass">
+            <div class="player-frame" id="clipPlayer"></div>
+
+            <div class="range-block">
+              <div class="range-block__head">
+                <span data-i18n="clip.range">Time range</span>
+                <span class="pill pill--soft" id="clipLength">0:00</span>
+              </div>
+              <div class="dual-range" id="dualRange">
+                <div class="dual-range__track"></div>
+                <div class="dual-range__fill" id="rangeFill"></div>
+                <input type="range" id="rangeStart" min="0" max="100" value="0" step="1"
+                  data-i18n-attr="aria-label:clip.start" aria-label="Start" />
+                <input type="range" id="rangeEnd" min="0" max="100" value="20" step="1"
+                  data-i18n-attr="aria-label:clip.end" aria-label="End" />
+              </div>
+              <div class="time-inputs">
+                <label class="field">
+                  <span data-i18n="clip.start">Start</span>
+                  <input class="input input--time" id="startTime" type="text" inputmode="numeric" value="00:00:00"
+                    pattern="[0-9:.]*" />
+                </label>
+                <label class="field">
+                  <span data-i18n="clip.end">End</span>
+                  <input class="input input--time" id="endTime" type="text" inputmode="numeric" value="00:00:20"
+                    pattern="[0-9:.]*" />
+                </label>
+                <button class="btn btn--ghost btn--sm" type="button" id="useCurrent" data-i18n="clip.useCurrent">Use
+                  player position</button>
+              </div>
+            </div>
+
+            <fieldset class="options">
+              <legend data-i18n="clip.options">Render options</legend>
+
+              <label class="field">
+                <span data-i18n="clip.titleOverlay">Title overlay</span>
+                <input class="input" id="clipTitle" type="text" maxlength="160"
+                  data-i18n-attr="placeholder:clip.titleOverlayPlaceholder"
+                  placeholder="Text drawn at the top of the clip" />
+              </label>
+
+              <div class="option-row option-row--watermark">
+                <label class="field">
+                  <span data-i18n="clip.watermark">Watermark</span>
+                  <input class="input" id="clipWatermark" type="text" maxlength="80"
+                    data-i18n-attr="placeholder:clip.watermarkPlaceholder" placeholder="e.g. @yourhandle" />
+                </label>
+                <div class="field">
+                  <span data-i18n="clip.position">Watermark position</span>
+                  <div class="corner-picker" id="cornerPicker" role="radiogroup"
+                    data-i18n-attr="aria-label:clip.position" aria-label="Watermark position">
+                    <button type="button" role="radio" aria-checked="false" data-corner="tl"
+                      data-i18n-attr="title:clip.positions.tl;aria-label:clip.positions.tl"><i></i></button>
+                    <button type="button" role="radio" aria-checked="false" data-corner="tr"
+                      data-i18n-attr="title:clip.positions.tr;aria-label:clip.positions.tr"><i></i></button>
+                    <button type="button" role="radio" aria-checked="false" data-corner="bl"
+                      data-i18n-attr="title:clip.positions.bl;aria-label:clip.positions.bl"><i></i></button>
+                    <button type="button" role="radio" aria-checked="true" data-corner="br"
+                      data-i18n-attr="title:clip.positions.br;aria-label:clip.positions.br"><i></i></button>
+                  </div>
+                </div>
+              </div>
+
+              <label class="switch">
+                <input type="checkbox" id="clipProgress" checked />
+                <span class="switch__track" aria-hidden="true"><span class="switch__thumb"></span></span>
+                <span class="switch__text">
+                  <strong data-i18n="clip.progressBar">Progress bar</strong>
+                  <small data-i18n="clip.progressBarHint">Animated bar burned along the bottom edge.</small>
+                </span>
+              </label>
+
+              <label class="switch" id="clipSubsWrap">
+                <input type="checkbox" id="clipSubs" />
+                <span class="switch__track" aria-hidden="true"><span class="switch__thumb"></span></span>
+                <span class="switch__text">
+                  <strong data-i18n="clip.subtitles">Burn in subtitles</strong>
+                  <small data-i18n="clip.subtitlesHint">Uses the video's caption track; disabled when none
+                    exists.</small>
+                </span>
+              </label>
+
+              <div class="option-row">
+                <label class="field">
+                  <span data-i18n="clip.quality">Output quality</span>
+                  <select class="select" id="clipQuality">
+                    <option value="1080">1080p</option>
+                    <option value="720" selected>720p</option>
+                    <option value="480">480p</option>
+                    <option value="360">360p</option>
+                  </select>
+                </label>
+                <label class="field">
+                  <span data-i18n="clip.format">Container</span>
+                  <select class="select" id="clipFormat">
+                    <option value="mp4" selected>MP4 (H.264)</option>
+                    <option value="webm">WebM (VP9)</option>
+                    <option value="mkv">MKV (Matroska)</option>
+                    <option value="mov">MOV (QuickTime)</option>
+                    <option value="gif" data-i18n="clip.gifOption">GIF (animated, no audio)</option>
+                  </select>
+                </label>
+                <label class="field" id="gifFpsField" hidden>
+                  <span data-i18n="clip.gifFps">GIF frame rate</span>
+                  <select class="select" id="clipGifFps">
+                    <option value="10">10 fps</option>
+                    <option value="15" selected>15 fps</option>
+                    <option value="20">20 fps</option>
+                    <option value="24">24 fps</option>
+                  </select>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="clip-actions">
+              <button class="btn btn--primary btn--lg" type="button" id="clipRender">
+                <span class="btn__label" data-i18n="clip.render">Render clip</span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+              <button class="btn btn--danger" type="button" id="clipCancel" hidden data-i18n="clip.cancel">Cancel
+                render</button>
+            </div>
+
+            <div class="render-status" id="renderStatus" hidden>
+              <div class="render-status__head">
+                <span id="renderStage"></span>
+                <span id="renderPercent">0%</span>
+              </div>
+              <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+                data-i18n-attr="aria-label:a11y.renderProgress" aria-label="Render progress">
+                <span class="progress__bar" id="renderBar"></span>
+              </div>
+              <a class="btn btn--primary" id="clipDownload" hidden download data-i18n="clip.download">Download clip</a>
+            </div>
+          </div>
+
+          <aside class="clip-side glass">
+            <h4 data-i18n="clip.recent">Recent clips</h4>
+            <div class="clip-list" id="clipList"></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="view" data-view="audioid" id="viewAudioId" hidden>
+      <header class="view-head">
+        <span class="view-head__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <use href="#ic-audioid" />
+          </svg>
+        </span>
+        <div>
+          <h1 class="view-head__title" data-i18n="audioId.title">Audio ID</h1>
+          <p class="view-head__subtitle" data-i18n="audioId.subtitle">
+            Identify a song from your microphone or from audio playing on this computer, then jump straight to it.
+          </p>
+        </div>
+      </header>
+
+      <div class="aid glass">
+        <div class="aid__sources">
+          <span class="aid__sources-label" id="aidSourcesLabel" data-i18n="audioId.sourceLabel">Listen to</span>
+          <div class="segmented" role="radiogroup" aria-labelledby="aidSourcesLabel">
+            <button class="segmented__btn is-active" type="button" role="radio" aria-checked="true" data-source="mic">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#ic-mic" />
+              </svg>
+              <span data-i18n="audioId.sources.mic">Microphone</span>
+            </button>
+            <button class="segmented__btn" type="button" role="radio" aria-checked="false" data-source="system">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#ic-monitor" />
+              </svg>
+              <span data-i18n="audioId.sources.system">System audio</span>
+            </button>
+            <button class="segmented__btn" type="button" role="radio" aria-checked="false" data-source="both">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <use href="#ic-both" />
+              </svg>
+              <span data-i18n="audioId.sources.both">Both</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="aid__stage" id="aidStage" data-state="idle">
+          <button class="aid-pulse" id="aidButton" type="button" data-i18n-attr="aria-label:a11y.listen"
+            aria-label="Start listening">
+            <span class="aid-pulse__ring"></span>
+            <span class="aid-pulse__ring"></span>
+            <span class="aid-pulse__ring"></span>
+            <svg class="aid-pulse__progress" viewBox="0 0 120 120" aria-hidden="true">
+              <circle cx="60" cy="60" r="56" pathLength="100" />
+            </svg>
+            <span class="aid-pulse__core" aria-hidden="true">
+              <svg class="aid-pulse__icon aid-pulse__icon--idle" viewBox="0 0 24 24">
+                <use href="#ic-wave" />
+              </svg>
+              <svg class="aid-pulse__icon aid-pulse__icon--stop" viewBox="0 0 24 24">
+                <rect x="7" y="7" width="10" height="10" rx="2" />
+              </svg>
+              <span class="spinner aid-pulse__spinner"></span>
+            </span>
+          </button>
+          <canvas class="aid__meter" id="aidMeter" width="320" height="56" data-i18n-attr="aria-label:audioId.level"
+            role="img" aria-label="Input level"></canvas>
+          <p class="aid__status" id="aidStatus" aria-live="polite" data-i18n="audioId.listen">Tap to listen</p>
+          <p class="aid__hint" id="aidHint"></p>
+        </div>
+
+        <div class="notice notice--warn" id="aidNotice" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#ic-warn" />
+          </svg>
+          <span id="aidNoticeText"></span>
+        </div>
+        <p class="aid__keyless" id="aidKeyless" hidden data-i18n="audioId.keyless"></p>
+      </div>
+
+      <article class="aid-result glass" id="aidResult" hidden aria-live="polite"></article>
+
+      <div class="section-head aid-history-head">
+        <h2 data-i18n="audioId.recent">Recently identified</h2>
+        <button class="btn btn--ghost btn--sm" type="button" id="aidClear" hidden data-i18n="audioId.clear">Clear
+          list</button>
+      </div>
+      <div class="aid-history" id="aidHistory"></div>
+    </section>
+
+    <section class="view" data-view="history" id="viewHistory" hidden>
+      <header class="view-head view-head--split">
+        <span class="view-head__icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <use href="#ic-history" />
+          </svg>
+        </span>
+        <div>
+          <h1 class="view-head__title" data-i18n="history.heading">Download history</h1>
+          <p class="view-head__subtitle" data-i18n="history.subtitle">Completed downloads only, stored locally in
+            SQLite.</p>
+        </div>
+        <button class="btn btn--danger btn--sm" type="button" id="historyClear" hidden data-i18n="history.clear">Clear
+          history</button>
+      </header>
+      <p class="muted small" id="historyTotals"></p>
+      <div class="table-wrap glass" id="historyTableWrap" hidden>
+        <table class="table" id="historyTable">
+          <thead>
+            <tr>
+              <th data-i18n="history.columns.title">Title</th>
+              <th data-i18n="history.columns.type">Type</th>
+              <th data-i18n="history.columns.quality">Quality</th>
+              <th data-i18n="history.columns.size">Size</th>
+              <th data-i18n="history.columns.date">Date</th>
+              <th><span class="sr-only" data-i18n="history.columns.actions">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody id="historyBody"></tbody>
+        </table>
+      </div>
+      <div class="empty-note glass" id="historyEmpty" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#ic-history" />
+        </svg>
+        <p data-i18n="history.empty">Your download history is empty.</p>
+      </div>
+    </section>
+  </main>
+
+  <section class="formats-showcase" id="panelFormats" aria-labelledby="formatsTitle" hidden>
+    <div class="shell">
+      <div class="formats-showcase__head">
+        <h2 id="formatsTitle" data-i18n="formatsSection.title">Supported formats</h2>
+
+        <div class="segmented formats-showcase__tabs" role="tablist" data-i18n-attr="aria-label:formatsSection.title">
+          <button class="segmented__btn is-active" type="button" role="tab" aria-selected="true"
+            aria-controls="formatCards" data-formatfamily="audio">
+            <span data-i18n="formatsSection.audioTab">Audio formats</span>
+            <span class="count" id="countAudioFormats"></span>
+          </button>
+          <button class="segmented__btn" type="button" role="tab" aria-selected="false" aria-controls="formatCards"
+            data-formatfamily="video">
+            <span data-i18n="formatsSection.videoTab">Video formats</span>
+            <span class="count" id="countVideoFormats"></span>
+          </button>
+        </div>
+      </div>
+      <div class="format-cards" id="formatCards" role="tabpanel"></div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="shell site-footer__inner">
+      <p class="site-footer__line">
+        <span class="site-footer__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z" />
+          </svg>
+        </span>
+        <span>
+          <strong data-i18n="footer.brand">TubeForge Media Engine</strong>
+          <span class="site-footer__dash" aria-hidden="true">—</span>
+          <span data-i18n="footer.powered">Powered by FFmpeg &amp; SQLite</span>.
+          <span class="site-footer__license" data-i18n="footer.license">For personal and open-license content processing
+            only.</span>
+        </span>
+      </p>
+      <p class="site-footer__copy" id="footerCopyright">© TubeForge</p>
+    </div>
+  </footer>
+
+  <div class="modal" id="playerModal" hidden role="dialog" aria-modal="true" aria-labelledby="playerModalTitle">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__box glass">
+      <div class="modal__head">
+        <h3 id="playerModalTitle" class="truncate"></h3>
+        <button class="icon-btn" type="button" data-close-modal data-i18n-attr="aria-label:a11y.closeModal"
+          aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#ic-close" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal__body" id="modalPlayer"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="sitesModal" hidden role="dialog" aria-modal="true" aria-labelledby="sitesModalTitle">
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__box glass modal__box--sites">
+      <div class="modal__head">
+        <div>
+          <h3 id="sitesModalTitle" data-i18n="platforms.moreTitle">Supported sites</h3>
+          <p class="muted small" data-i18n="platforms.moreSubtitle">Extraction runs through yt-dlp.</p>
+        </div>
+        <button class="icon-btn" type="button" data-close-modal data-i18n-attr="aria-label:a11y.closeModal"
+          aria-label="Close dialog">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#ic-close" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal__body" id="sitesGrid"></div>
+      <p class="modal__foot muted small" data-i18n="platforms.moreHint">Anything not listed is still worth pasting.</p>
+    </div>
+  </div>
+
+  <button class="to-top" id="toTop" type="button" data-i18n-attr="aria-label:a11y.scrollTop;title:a11y.scrollTop"
+    aria-label="Back to top">
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 19V5m0 0-7 7m7-7 7 7" />
+    </svg>
+  </button>
+
+  <div class="toasts" id="toasts" role="region" aria-live="polite" aria-label="Notifications"></div>
+
+  <template id="tpl-format">
+    <div class="format glass">
+      <div class="format__badge"></div>
+      <div class="format__info">
+        <strong class="format__quality"></strong>
+        <span class="format__detail muted small"></span>
+      </div>
+      <span class="format__size"></span>
+      <button class="btn btn--primary btn--sm format__btn" type="button">
+        <span class="btn__label" data-i18n="video.download">Download</span>
+        <span class="spinner" aria-hidden="true"></span>
+      </button>
+    </div>
+  </template>
+
+  <template id="tpl-playlist-item">
+    <label class="pl-item glass">
+      <input type="checkbox" class="pl-item__check" />
+      <span class="pl-item__box" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="m5 13 4 4L19 7" />
+        </svg>
+      </span>
+      <span class="pl-item__index"></span>
+      <img class="pl-item__thumb" alt="" loading="lazy" decoding="async" />
+      <span class="pl-item__body">
+        <span class="pl-item__title"></span>
+        <span class="pl-item__meta muted small"></span>
+      </span>
+      <span class="pl-item__duration"></span>
+    </label>
+  </template>
+
+  <template id="tpl-queue-item">
+    <div class="queue-item">
+      <span class="queue-item__status" aria-hidden="true"></span>
+      <span class="queue-item__title truncate"></span>
+      <span class="queue-item__state muted small"></span>
+      <span class="queue-item__bar" aria-hidden="true"><span></span></span>
+    </div>
+  </template>
+
+  <template id="tpl-concept">
+    <article class="concept glass">
+      <header>
+        <h5 class="concept__term"></h5>
+        <button class="timestamp" type="button"></button>
+      </header>
+      <p class="concept__explanation"></p>
+      <p class="concept__takeaway">
+        <span class="concept__takeaway-label" data-i18n="study.conceptTakeaway">Takeaway</span><span
+          class="concept__takeaway-text"></span>
+      </p>
+    </article>
+  </template>
+
+  <template id="tpl-format-card">
+    <article class="fcard glass">
+      <div class="fcard__glyph" aria-hidden="true">
+        <span class="fcard__ext"></span>
+      </div>
+      <div class="fcard__body">
+        <h3 class="fcard__name"></h3>
+        <span class="fcard__tagline"></span>
+        <p class="fcard__desc"></p>
+      </div>
+      <div class="fcard__badges"></div>
+    </article>
+  </template>
+
+  <template id="tpl-clip-card">
+    <div class="clip-card">
+      <img class="clip-card__thumb" alt="" loading="lazy" decoding="async" />
+      <div class="clip-card__body">
+        <span class="clip-card__title truncate"></span>
+        <span class="clip-card__meta muted small"></span>
+      </div>
+      <div class="clip-card__actions">
+        <a class="icon-btn icon-btn--sm clip-card__dl" download
+          data-i18n-attr="aria-label:clip.download;title:clip.download">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#ic-download" />
+          </svg>
+        </a>
+        <button class="icon-btn icon-btn--sm clip-card__del" type="button"
+          data-i18n-attr="aria-label:clip.delete;title:clip.delete" aria-label="Delete clip">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <use href="#ic-trash" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </template>
+
+  <template id="tpl-aid-item">
+    <article class="aid-item glass">
+      <div class="aid-item__cover"><img alt="" loading="lazy" decoding="async" /></div>
+      <div class="aid-item__body">
+        <strong class="aid-item__title truncate"></strong>
+        <span class="aid-item__artist truncate"></span>
+        <span class="aid-item__meta"></span>
+      </div>
+      <div class="aid-item__links"></div>
+      <button class="icon-btn icon-btn--sm aid-item__del" type="button"
+        data-i18n-attr="aria-label:audioId.remove;title:audioId.remove" aria-label="Remove">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <use href="#ic-trash" />
+        </svg>
+      </button>
+    </article>
+  </template>
+
+  <script type="module" src="script.js"></script>
+</body>
+
+</html>

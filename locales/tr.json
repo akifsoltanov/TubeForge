@@ -1,0 +1,514 @@
+{
+  "meta": {
+    "code": "tr",
+    "name": "Turkish",
+    "native": "Türkçe",
+    "dir": "ltr"
+  },
+  "app": {
+    "name": "TubeForge",
+    "tagline": "İndir. Öğren. Kes.",
+    "description": "Binden fazla siteden medya indir, dönüştür ve kes; konuşmaları ders materyaline çevir, şarkıları tanı — hepsi kendi makinende."
+  },
+  "nav": {
+    "downloader": "İndirici",
+    "playlist": "Oynatma listesi",
+    "study": "Çalışma modu",
+    "clips": "Klip stüdyosu",
+    "history": "Geçmiş",
+    "menu": "Menü",
+    "close": "Kapat",
+    "theme": "Tema",
+    "themeLight": "Açık tema",
+    "themeDark": "Koyu tema",
+    "language": "Dil",
+    "audioId": "Audio ID"
+  },
+  "hero": {
+    "title": "İçerik senin, kurallar senin,",
+    "titleAccent": "Sosyal medyadaki her şey senin şartlarınla.",
+    "placeholder": "https://www.youtube.com/watch?v=…",
+    "analyze": "Aramak",
+    "analyzing": "Analiz ediliyor…",
+    "paste": "Panodan yapıştır",
+    "clear": "Alanı temizle",
+    "stats": {
+      "videoFormats": "Video formatları",
+      "audioFormats": "Ses formatları",
+      "languages": "Arayüz dilleri",
+      "platforms": "Desteklenen platformlar",
+      "platformsHint": "yt-dlp ile erişilebilen siteler"
+    }
+  },
+  "input": {
+    "empty": "Başlamak için bir bağlantı yapıştır.",
+    "invalid": "Bu geçerli bir bağlantıya benzemiyor.",
+    "detectedVideo": "Video bağlantısı algılandı",
+    "detectedPlaylist": "Oynatma listesi bağlantısı algılandı",
+    "pasteDenied": "Tarayıcı pano erişimini engelledi.",
+    "pasteEmpty": "Panon boş."
+  },
+  "platforms": {
+    "label": "Platformunu seç",
+    "more": "+100 Daha",
+    "moreTitle": "Desteklenen siteler",
+    "moreSubtitle": "Çıkarma işlemi, binden fazla siteyi destekleyen yt-dlp ile yapılır. Bunlar en çok istenenler.",
+    "moreHint": "Listede olmayanı da yapıştırmayı dene — yt-dlp siteyi tanıyorsa TubeForge indirebilir.",
+    "detected": "{platform} bağlantısı algılandı",
+    "authNote": "Gizli, yaş sınırlı veya bölge kilitli gönderiler için çerez dosyası gerekebilir. .env dosyanızda COOKIES_FILE ayarlayın.",
+    "groups": {
+      "video": "Video",
+      "social": "Sosyal",
+      "audio": "Ses ve müzik",
+      "learning": "Eğitim ve arşivler",
+      "news": "Haber",
+      "live": "Canlı yayın"
+    },
+    "hints": {
+      "youtube": "YouTube video veya oynatma listesi bağlantısını buraya yapıştır…",
+      "facebook": "Facebook video veya Reels bağlantısını buraya yapıştır…",
+      "ok": "OK.ru video bağlantısını buraya yapıştır…",
+      "twitter": "X (Twitter) gönderi bağlantısını buraya yapıştır…",
+      "tiktok": "TikTok video bağlantısını buraya yapıştır…",
+      "instagram": "Instagram Reels veya gönderi bağlantısını buraya yapıştır…",
+      "twitch": "Twitch VOD veya klip bağlantısını buraya yapıştır…",
+      "vk": "VK video bağlantısını buraya yapıştır…",
+      "generic": "Desteklenen herhangi bir medya bağlantısını buraya yapıştır…"
+    }
+  },
+  "video": {
+    "convertTo": "Şu formatta indir",
+    "convertOriginal": "Orijinal — yeniden kodlama yok",
+    "convertHint": "Dönüştürmeler dosya akarken FFmpeg ile kodlanır, bu yüzden orijinalden uzun sürer.",
+    "channel": "Kanal",
+    "duration": "Süre",
+    "views": "Görüntüleme",
+    "likes": "Beğeni",
+    "published": "Yayınlanma",
+    "captions": "Altyazı mevcut",
+    "noCaptions": "Altyazı yok",
+    "openOnYoutube": "YouTube'da aç",
+    "preview": "Önizleme",
+    "formats": "Mevcut formatlar",
+    "videoTab": "Video",
+    "audioTab": "Ses",
+    "quality": "Kalite",
+    "size": "Boyut",
+    "codec": "Kodek",
+    "fps": "FPS",
+    "bitrate": "Bit hızı",
+    "download": "İndir",
+    "downloading": "Hazırlanıyor…",
+    "estimated": "yaklaşık",
+    "merge": "Birleştirilmiş",
+    "mergeHint": "Video ve ses, akış sırasında FFmpeg tarafından birleştirilir.",
+    "progressive": "Tek dosya",
+    "best": "En iyi",
+    "noFormats": "Bu video için indirilebilir format bulunamadı.",
+    "studyCta": "Çalışma modunda aç",
+    "clipCta": "Klip kes",
+    "openSource": "{platform} üzerinde aç"
+  },
+  "playlist": {
+    "heading": "Oynatma listesi",
+    "by": "sahibi",
+    "videos": "{count} video",
+    "totalDuration": "Toplam süre",
+    "selectAll": "Tümünü seç",
+    "deselectAll": "Seçimi kaldır",
+    "selected": "{count} seçildi",
+    "qualityLabel": "Kuyruk kalitesi",
+    "formatLabel": "Kuyruk formatı",
+    "startQueue": "Seçilenleri indir",
+    "stopQueue": "Kuyruğu durdur",
+    "clearQueue": "Kuyruğu temizle",
+    "queueTitle": "İndirme kuyruğu",
+    "queueEmpty": "Kuyruk boş. Yukarıdan video seçip kuyruğu başlat.",
+    "nothingSelected": "Önce en az bir video seç.",
+    "truncated": "Bu listenin ilk {count} videosu gösteriliyor.",
+    "status": {
+      "pending": "Bekliyor",
+      "downloading": "İndiriliyor",
+      "done": "Kaydedildi",
+      "failed": "Başarısız",
+      "skipped": "Atlandı"
+    },
+    "subtitle": "Bir oynatma listesi yükle, videoları seç ve kuyrukla indir.",
+    "unavailable": "Kullanılamıyor"
+  },
+  "study": {
+    "heading": "Yapay zekâ çalışma modu",
+    "subtitle": "Altyazılar — video altyazısızsa yerel konuşma tanımayla elde edilen transkript — özete, anahtar kavramlara ve teste dönüşür.",
+    "generate": "Ders paketi oluştur",
+    "generating": "Transkript okunuyor…",
+    "regenerate": "Yeniden oluştur",
+    "providerLabel": "Oluşturan",
+    "provider": {
+      "offline": "Çevrimdışı analizör",
+      "anthropic": "Claude"
+    },
+    "tabs": {
+      "summary": "Özet",
+      "concepts": "Anahtar kavramlar",
+      "quiz": "Test",
+      "transcript": "Transkript"
+    },
+    "summaryTitle": "Bu video neyi anlatıyor",
+    "conceptsTitle": "Anahtar kavramlar",
+    "conceptTakeaway": "Çıkarım",
+    "quizTitle": "Kendini test et",
+    "quizIntro": "Transkriptten {count} soru üretildi.",
+    "quizStart": "Teste başla",
+    "quizNext": "Sonraki soru",
+    "quizPrev": "Önceki",
+    "quizFinish": "Sonuçları gör",
+    "quizRestart": "Tekrar dene",
+    "quizProgress": "Soru {current} / {total}",
+    "quizScore": "Puanın: {score} / {total}",
+    "quizCorrect": "Doğru",
+    "quizWrong": "Yanlış",
+    "quizAnswerWas": "Doğru cevap:",
+    "quizPerfect": "Kusursuz — konuya hâkimsin.",
+    "quizGood": "İyi iş. Kaçırdığın kavramları gözden geçir.",
+    "quizPoor": "Özeti bir kez daha okumakta fayda var.",
+    "transcriptTitle": "Etkileşimli transkript",
+    "transcriptSearch": "Transkriptte ara…",
+    "transcriptHits": "{count} sonuç",
+    "chaptersTitle": "Bölümler",
+    "noTranscript": "Bu medya için transkript oluşturulamadı.",
+    "langLabel": "Transkript dili",
+    "autoCaptions": "Otomatik oluşturuldu",
+    "stats": {
+      "words": "Kelime",
+      "readingTime": "Okuma süresi",
+      "segments": "Segment"
+    },
+    "jumpHint": "Oynatıcıyı o ana almak için herhangi bir satıra tıkla.",
+    "speech": {
+      "queued": "Transkripsiyon hazırlanıyor…",
+      "downloading": "Ses alınıyor… %{progress}",
+      "transcribing": "Konuşma yerel olarak metne dönüştürülüyor… %{progress}",
+      "note": "Altyazı bulunamadı — ses bu makinede Whisper ({model}) ile metne dönüştürülecek.",
+      "unavailable": "Altyazı bulunamadı ve yerel konuşma tanıma kurulu değil. Sunucuda npm run setup:whisper komutunu çalıştır.",
+      "truncated": "Yalnızca ilk {minutes} dakika metne dönüştürüldü.",
+      "source": "Whisper ile yerel olarak metne dönüştürüldü"
+    },
+    "thinNote": "Bu transkript anahtar kavramlar veya test için çok kısa, bu yüzden tamamı gösteriliyor.",
+    "sourceCaptions": "Altyazı parçasından"
+  },
+  "clip": {
+    "gifOption": "GIF (animasyonlu, sessiz)",
+    "gifFps": "GIF kare hızı",
+    "heading": "FFmpeg klip stüdyosu",
+    "subtitle": "Bir bölümü kes; başlık, filigran, altyazı ve ilerleme çubuğu göm — tümü sunucuda FFmpeg ile işlenir.",
+    "range": "Zaman aralığı",
+    "start": "Başlangıç",
+    "end": "Bitiş",
+    "clipLength": "Klip uzunluğu",
+    "useCurrent": "Oynatıcı konumunu al",
+    "options": "İşleme seçenekleri",
+    "titleOverlay": "Başlık yazısı",
+    "titleOverlayPlaceholder": "Klibin üstüne çizilecek metin",
+    "progressBar": "İlerleme çubuğu",
+    "progressBarHint": "Alt kenara gömülen animasyonlu çubuk.",
+    "watermark": "Filigran",
+    "watermarkPlaceholder": "örn. @kullaniciadi",
+    "position": "Filigran konumu",
+    "positions": {
+      "tl": "Sol üst",
+      "tr": "Sağ üst",
+      "bl": "Sol alt",
+      "br": "Sağ alt"
+    },
+    "subtitles": "Altyazıyı göm",
+    "subtitlesHint": "Videonun altyazısını kullanır; altyazı yoksa devre dışıdır.",
+    "quality": "Çıktı kalitesi",
+    "format": "Kapsayıcı",
+    "render": "Klibi oluştur",
+    "rendering": "Oluşturuluyor…",
+    "cancel": "İşlemeyi iptal et",
+    "download": "Klibi indir",
+    "renderAnother": "Yeni klip",
+    "stages": {
+      "queued": "Kuyrukta",
+      "downloading": "Kaynak akışlar alınıyor",
+      "processing": "FFmpeg ile kodlanıyor",
+      "done": "Hazır",
+      "failed": "Başarısız",
+      "canceled": "İptal edildi"
+    },
+    "errors": {
+      "range": "Bitiş zamanı başlangıçtan sonra olmalı.",
+      "tooLong": "İşlemleri hızlı tutmak için klipler {max} ile sınırlı.",
+      "bounds": "Aralık videonun süresi içinde olmalı.",
+      "noVideo": "Önce bir video yükle."
+    },
+    "recent": "Son klipler",
+    "noClips": "Henüz klip oluşturulmadı.",
+    "delete": "Klibi sil"
+  },
+  "history": {
+    "heading": "İndirme geçmişi",
+    "subtitle": "Yalnızca tamamlanan indirmeler, SQLite içinde yerel olarak saklanır.",
+    "empty": "İndirme geçmişin boş.",
+    "clear": "Geçmişi temizle",
+    "confirmClear": "Tüm kayıtlar silinsin mi? Bu geri alınamaz.",
+    "remove": "Kaydı sil",
+    "again": "Tekrar indir",
+    "columns": {
+      "title": "Başlık",
+      "type": "Tür",
+      "quality": "Kalite",
+      "size": "Boyut",
+      "date": "Tarih",
+      "actions": "İşlemler"
+    },
+    "totals": "{count} indirme · {size} aktarıldı"
+  },
+  "toast": {
+    "metaLoaded": "Video yüklendi",
+    "metaFailed": "Video okunamadı",
+    "playlistLoaded": "Oynatma listesi yüklendi",
+    "playlistFailed": "Oynatma listesi okunamadı",
+    "downloadStarted": "İndirme başladı",
+    "downloadFailed": "İndirme başarısız",
+    "queueFinished": "Kuyruk bitti — {done} kaydedildi, {failed} başarısız",
+    "studyReady": "Ders paketi hazır",
+    "studyFailed": "Ders paketi oluşturulamadı",
+    "clipQueued": "Klip işleme kuyruğuna alındı",
+    "clipDone": "Klip oluşturuldu",
+    "clipFailed": "Klip oluşturma başarısız",
+    "clipCanceled": "İşleme iptal edildi",
+    "clipDeleted": "Klip silindi",
+    "historyCleared": "Geçmiş temizlendi",
+    "entryRemoved": "Kayıt silindi",
+    "copied": "Panoya kopyalandı",
+    "copyFailed": "Kopyalanamadı",
+    "languageChanged": "Dil değiştirildi: {language}",
+    "themeLight": "Açık tema etkin",
+    "themeDark": "Koyu tema etkin",
+    "offline": "Çevrimdışı görünüyorsun",
+    "audioIdMatched": "Tanındı: {title}",
+    "audioIdNoMatch": "Eşleşme bulunamadı",
+    "audioIdCleared": "Liste temizlendi",
+    "audioIdRemoved": "Kaldırıldı"
+  },
+  "errors": {
+    "authRequired": "Bu gönderi için oturum açmış bir hesap gerekiyor. Erişmek için bir çerez dosyası ekle.",
+    "unsupportedSite": "Çıkarma motoru bu siteyi desteklemiyor.",
+    "geoBlocked": "Bu medya sunucunun bölgesinde engellenmiş.",
+    "needsCookies": "Site, bu sunucudan bot olmadığını kanıtlamasını istedi. Genellikle bir çerez dosyası bunu çözer.",
+    "transcode": "FFmpeg bu kaynaktan o formatı üretemedi.",
+    "engineMissing": "Bu platform yt-dlp gerektiriyor ancak sunucuda kurulu değil.",
+    "gifRange": "GIF'ler bir zaman aralığından kesilir — Klip stüdyosunu kullan.",
+    "generic": "Bir şeyler ters gitti. Tekrar dene.",
+    "network": "Sunucuya ulaşılamıyor.",
+    "invalidUrl": "Desteklenmeyen veya hatalı bağlantı.",
+    "notFound": "Video bulunamadı.",
+    "private": "Bu video gizli veya yaş sınırlı.",
+    "live": "Canlı yayınlar işlenemez.",
+    "unavailable": "Bu video sunucunun bölgesinde kullanılamıyor.",
+    "ffmpeg": "Sunucuda FFmpeg bulunamadı.",
+    "rateLimited": "YouTube bu sunucuyu sınırlıyor. Birazdan tekrar dene.",
+    "tooLarge": "Bu istek yapılandırılmış sınırları aşıyor.",
+    "busy": "Sunucu başka bir işlemle meşgul.",
+    "blocked": "Site bu sunucuyu reddetti (HTTP 403). Genellikle geçici bot korumasıdır — daha sonra tekrar dene.",
+    "speechFailed": "Konuşma metne dönüştürülemedi.",
+    "audioTooShort": "Kayıt tanımak için çok kısa.",
+    "audioUnreadable": "Kayıt çözümlenemedi.",
+    "recognitionLimited": "Tanıma hizmetinin ücretsiz limiti doldu. Bir API anahtarı ekle veya daha sonra dene.",
+    "recognitionFailed": "Tanıma hizmeti şu anda kullanılamıyor.",
+    "noSpeech": "Bu medyada konuşma algılanmadı — müzik veya sessizlik olabilir.",
+    "upstream": "Kaynak site bir hata döndürdü. Biraz sonra tekrar dene.",
+    "timeout": "Kaynak yanıt vermekte çok gecikti.",
+    "noCaptions": "Bu medyanın altyazısı yok ve transkript oluşturulamadı."
+  },
+  "common": {
+    "close": "Kapat",
+    "cancel": "İptal",
+    "confirm": "Onayla",
+    "retry": "Tekrar dene",
+    "loading": "Yükleniyor…",
+    "search": "Ara",
+    "copy": "Bağlantıyı kopyala",
+    "open": "Aç",
+    "delete": "Sil",
+    "all": "Tümü",
+    "yes": "Evet",
+    "no": "Hayır",
+    "optional": "isteğe bağlı",
+    "on": "Açık",
+    "off": "Kapalı",
+    "unknown": "Bilinmiyor",
+    "auto": "Otomatik",
+    "beta": "Beta",
+    "second": "sn",
+    "minute": "dk",
+    "hour": "sa"
+  },
+  "skeleton": {
+    "label": "Meta veriler alınıyor…"
+  },
+  "formatsSection": {
+    "title": "Desteklenen formatlar",
+    "subtitle": "Tüm dönüştürmeler kendi makinende FFmpeg ile yapılır. İş akışının gerçekten istediği kapsayıcıyı seç.",
+    "audioTab": "Ses formatları",
+    "videoTab": "Video formatları",
+    "lossless": "Kayıpsız",
+    "lossy": "Kayıplı",
+    "remux": "Yeniden kodlama yok",
+    "audio": {
+      "mp3": {
+        "name": "MP3",
+        "tagline": "Evrensel",
+        "desc": "Neredeyse tüm medya oynatıcılarla uyumlu evrensel ses formatı."
+      },
+      "aac": {
+        "name": "AAC",
+        "tagline": "Yüksek verim",
+        "desc": "Modern cihazlar için standart, yüksek verimli ses kodlaması."
+      },
+      "m4a": {
+        "name": "M4A",
+        "tagline": "AAC kapsayıcısı",
+        "desc": "Apple cihazları için optimum sıkıştırmalı, yüksek kaliteli AAC ses kapsayıcısı."
+      },
+      "alac": {
+        "name": "ALAC",
+        "tagline": "Apple'da kayıpsız",
+        "desc": "Apple'ın kayıpsız kodeği — iOS ve macOS'ta yerel destekle stüdyo kalitesinde ses."
+      },
+      "flac": {
+        "name": "FLAC",
+        "tagline": "Kayıpsız",
+        "desc": "Orijinal stüdyo sesinin %100'ünü koruyan kayıpsız ses formatı."
+      },
+      "wav": {
+        "name": "WAV",
+        "tagline": "Sıkıştırılmamış",
+        "desc": "Profesyonel ses düzenleme yazılımları için sıkıştırılmamış PCM ses."
+      },
+      "opus": {
+        "name": "Opus",
+        "tagline": "Düşük gecikme",
+        "desc": "Web yayını için tasarlanmış, son derece verimli, düşük gecikmeli ses kodeği."
+      },
+      "ogg": {
+        "name": "OGG",
+        "tagline": "Açık kaynak",
+        "desc": "Web uygulamaları ve oyunlar için açık kaynaklı ses kapsayıcısı."
+      }
+    },
+    "video": {
+      "mp4": {
+        "name": "MP4",
+        "tagline": "H.264",
+        "desc": "Tüm cihazlarda desteklenen endüstri standardı video kapsayıcısı."
+      },
+      "mkv": {
+        "name": "MKV",
+        "tagline": "Matroska",
+        "desc": "Çoklu ses parçası, altyazı ve kayıpsız yeniden paketlemeyi destekleyen çok yönlü kapsayıcı."
+      },
+      "webm": {
+        "name": "WebM",
+        "tagline": "HTML5",
+        "desc": "Hızlı HTML5 yayını için optimize edilmiş modern web video formatı."
+      },
+      "mov": {
+        "name": "MOV",
+        "tagline": "QuickTime",
+        "desc": "Video düzenleme iş akışları için tasarlanmış yüksek bit hızlı Apple QuickTime formatı."
+      },
+      "avi": {
+        "name": "AVI",
+        "tagline": "Klasik",
+        "desc": "Eski donanımlarla uyumluluk sağlayan klasik video formatı."
+      },
+      "flv": {
+        "name": "FLV",
+        "tagline": "Flash",
+        "desc": "Eski video yayınları için Flash video kapsayıcısı."
+      },
+      "gif": {
+        "name": "GIF",
+        "tagline": "Animasyon",
+        "desc": "Sosyal paylaşım için sessiz, döngüsel animasyon dizisi."
+      }
+    }
+  },
+  "footer": {
+    "brand": "TubeForge Medya Motoru",
+    "powered": "FFmpeg ve SQLite ile güçlendirilmiştir",
+    "license": "Yalnızca kişisel ve açık lisanslı içeriklerin işlenmesi içindir.",
+    "copyright": "© {year} TubeForge"
+  },
+  "a11y": {
+    "scrollTop": "Başa dön",
+    "choosePlatform": "Platform seç",
+    "moreSites": "Daha fazla desteklenen site göster",
+    "skipToContent": "Ana içeriğe geç",
+    "openMenu": "Gezinme menüsünü aç",
+    "closeMenu": "Gezinme menüsünü kapat",
+    "toggleTheme": "Renk temasını değiştir",
+    "selectLanguage": "Arayüz dilini seç",
+    "playVideo": "Video önizlemesini oynat",
+    "closeModal": "İletişim kutusunu kapat",
+    "selectVideo": "Bu videoyu seç",
+    "renderProgress": "İşleme ilerlemesi",
+    "downloadProgress": "İndirme ilerlemesi",
+    "listen": "Dinlemeye başla"
+  },
+  "tools": {
+    "load": "Yükle",
+    "loading": "Yükleniyor…",
+    "placeholderStudy": "Çalışmak için bir video veya ses bağlantısı yapıştır…",
+    "placeholderClip": "Kesmek için bir video bağlantısı yapıştır…",
+    "placeholderPlaylist": "Oynatma listesi bağlantısı yapıştır…",
+    "hintStudy": "Varsa altyazılar kullanılır; yoksa ses bu makinede metne dönüştürülür.",
+    "hintClip": "Bir aralık seç, katmanlar ekle; FFmpeg sunucuda işler.",
+    "hintPlaylist": "YouTube oynatma listeleri — liste içinde oynayan bir videodan kopyalanan bağlantılar dahil."
+  },
+  "audioId": {
+    "title": "Audio ID",
+    "subtitle": "Mikrofondan veya bu bilgisayarda çalan sesten bir şarkıyı tanı ve doğrudan ona git.",
+    "listen": "Dinlemek için dokun",
+    "listening": "Dinleniyor… {seconds} sn",
+    "identifying": "Tanınıyor…",
+    "stop": "Durdur",
+    "sourceLabel": "Kaynak",
+    "sources": {
+      "mic": "Mikrofon",
+      "system": "Sistem sesi",
+      "both": "İkisi de"
+    },
+    "sourceHints": {
+      "mic": "Cihazını hoparlöre yakın tut.",
+      "system": "Tarayıcı hangi sekmeyi veya ekranı paylaşacağını soracak — “Sesi paylaş” seçeneğini işaretle.",
+      "both": "Mikrofonu paylaşılan sistem sesiyle karıştırır."
+    },
+    "noMatch": "Eşleşme yok. Şarkının daha yüksek veya daha uzun bir bölümünü dene.",
+    "matched": "Eşleşme bulundu",
+    "recent": "Son tanınanlar",
+    "empty": "Henüz hiçbir şey tanınmadı.",
+    "clear": "Listeyi temizle",
+    "confirmClear": "Tanınan tüm parçalar silinsin mi?",
+    "open": "TubeForge'da aç",
+    "youtube": "YouTube",
+    "spotify": "Spotify",
+    "apple": "Apple Music",
+    "songLink": "Tüm platformlar",
+    "keyless": "AudD'nin ücretsiz anahtarsız katmanı kullanılıyor — daha yüksek limit için AUDD_API_TOKEN ayarla.",
+    "level": "Giriş seviyesi",
+    "remove": "Kaldır",
+    "via": "{provider} üzerinden",
+    "errors": {
+      "insecure": "Ses kaydı için HTTPS veya localhost gerekir. TubeForge'u bu makinede http://localhost:3000 adresinde aç.",
+      "unsupported": "Bu tarayıcı ses kaydedemiyor.",
+      "denied": "Ses girişine erişim reddedildi.",
+      "noSystemAudio": "Ses paylaşılmadı. Paylaşım penceresinde “Sekme sesini paylaş” veya “Sistem sesini paylaş” seçeneğini işaretle.",
+      "systemUnsupported": "Bu tarayıcı sistem sesini yakalayamıyor. Chrome veya Edge kullan ya da Mikrofon'u seç.",
+      "silent": "Hiçbir şey duyulmadı — giriş sessizdi."
+    }
+  }
+}

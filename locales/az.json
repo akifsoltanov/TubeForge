@@ -1,0 +1,514 @@
+{
+  "meta": {
+    "code": "az",
+    "name": "Azerbaijani",
+    "native": "Azərbaycan",
+    "dir": "ltr"
+  },
+  "app": {
+    "name": "TubeForge",
+    "tagline": "Yüklə. Öyrən. Kəs.",
+    "description": "Mindən çox saytdan media yüklə, çevir və kəs, mühazirələri dərs materialına çevir, mahnıları tanı — hamısı öz kompüterində."
+  },
+  "nav": {
+    "downloader": "Yükləyici",
+    "playlist": "Pleylist",
+    "study": "Öyrənmə rejimi",
+    "clips": "Klip studiyası",
+    "history": "Tarixçə",
+    "menu": "Menyu",
+    "close": "Bağla",
+    "theme": "Tema",
+    "themeLight": "İşıqlı rejim",
+    "themeDark": "Qaranlıq rejim",
+    "language": "Dil",
+    "audioId": "Audio ID"
+  },
+  "hero": {
+    "title": "Məzmun sənin, qaydalar sənin,",
+    "titleAccent": "Sosial mediada hər şey sənin şərtlərinlə.",
+    "placeholder": "https://www.youtube.com/watch?v=…",
+    "analyze": "Axtar",
+    "analyzing": "Təhlil edilir…",
+    "paste": "Mübadilə buferindən yapışdır",
+    "clear": "Sahəni təmizlə",
+    "stats": {
+      "videoFormats": "Video formatları",
+      "audioFormats": "Audio formatları",
+      "languages": "İnterfeys dilləri",
+      "platforms": "Dəstəklənən platformalar",
+      "platformsHint": "yt-dlp ilə əlçatan saytlar"
+    }
+  },
+  "input": {
+    "empty": "Başlamaq üçün link yapışdır.",
+    "invalid": "Bu, düzgün linkə bənzəmir.",
+    "detectedVideo": "Video linki aşkarlandı",
+    "detectedPlaylist": "Pleylist linki aşkarlandı",
+    "pasteDenied": "Brauzer mübadilə buferinə girişi bloklayıb.",
+    "pasteEmpty": "Mübadilə buferi boşdur."
+  },
+  "platforms": {
+    "label": "Platformanı seç",
+    "more": "+100 Daha",
+    "moreTitle": "Dəstəklənən saytlar",
+    "moreSubtitle": "Çıxarış mindən çox saytı dəstəkləyən yt-dlp vasitəsilə aparılır. Bunlar ən çox istənilənlərdir.",
+    "moreHint": "Siyahıda olmayanı da yapışdırmağa dəyər — yt-dlp saytı tanıyırsa, TubeForge onu yükləyə bilər.",
+    "detected": "{platform} linki aşkarlandı",
+    "authNote": "Gizli, yaş məhdudiyyətli və ya regionla bloklanmış paylaşımlar üçün kuki faylı lazım ola bilər. .env faylında COOKIES_FILE təyin edin.",
+    "groups": {
+      "video": "Video",
+      "social": "Sosial",
+      "audio": "Audio və musiqi",
+      "learning": "Təhsil və arxivlər",
+      "news": "Xəbərlər",
+      "live": "Canlı yayım"
+    },
+    "hints": {
+      "youtube": "YouTube video və ya pleylist linkini bura yapışdır…",
+      "facebook": "Facebook video və ya Reels linkini bura yapışdır…",
+      "ok": "OK.ru video linkini bura yapışdır…",
+      "twitter": "X (Twitter) paylaşım linkini bura yapışdır…",
+      "tiktok": "TikTok video linkini bura yapışdır…",
+      "instagram": "Instagram Reels və ya paylaşım linkini bura yapışdır…",
+      "twitch": "Twitch VOD və ya klip linkini bura yapışdır…",
+      "vk": "VK video linkini bura yapışdır…",
+      "generic": "Dəstəklənən istənilən media linkini bura yapışdır…"
+    }
+  },
+  "video": {
+    "convertTo": "Format seç",
+    "convertOriginal": "Orijinal — yenidən kodlanmır",
+    "convertHint": "Çevirmələr fayl axarkən FFmpeg ilə kodlanır, ona görə orijinaldan uzun çəkir.",
+    "channel": "Kanal",
+    "duration": "Müddət",
+    "views": "Baxış",
+    "likes": "Bəyənmə",
+    "published": "Yayımlanıb",
+    "captions": "Altyazı mövcuddur",
+    "noCaptions": "Altyazı yoxdur",
+    "openOnYoutube": "YouTube-da aç",
+    "preview": "Önizləmə",
+    "formats": "Mövcud formatlar",
+    "videoTab": "Video",
+    "audioTab": "Audio",
+    "quality": "Keyfiyyət",
+    "size": "Həcm",
+    "codec": "Kodek",
+    "fps": "FPS",
+    "bitrate": "Bitreyt",
+    "download": "Yüklə",
+    "downloading": "Hazırlanır…",
+    "estimated": "təxmini",
+    "merge": "Birləşdirilmiş",
+    "mergeHint": "Video və audio axın zamanı FFmpeg tərəfindən birləşdirilir.",
+    "progressive": "Tək fayl",
+    "best": "Ən yaxşı",
+    "noFormats": "Bu video üçün yüklənə bilən format tapılmadı.",
+    "studyCta": "Öyrənmə rejimində aç",
+    "clipCta": "Klip kəs",
+    "openSource": "{platform} saytında aç"
+  },
+  "playlist": {
+    "heading": "Pleylist",
+    "by": "müəllif",
+    "videos": "{count} video",
+    "totalDuration": "Ümumi müddət",
+    "selectAll": "Hamısını seç",
+    "deselectAll": "Seçimi ləğv et",
+    "selected": "{count} seçildi",
+    "qualityLabel": "Növbə keyfiyyəti",
+    "formatLabel": "Növbə formatı",
+    "startQueue": "Seçilmişləri yüklə",
+    "stopQueue": "Növbəni dayandır",
+    "clearQueue": "Növbəni təmizlə",
+    "queueTitle": "Yükləmə növbəsi",
+    "queueEmpty": "Növbə boşdur. Yuxarıdan video seç və növbəni başlat.",
+    "nothingSelected": "Əvvəlcə ən azı bir video seç.",
+    "truncated": "Bu pleylistin ilk {count} videosu göstərilir.",
+    "status": {
+      "pending": "Gözləyir",
+      "downloading": "Yüklənir",
+      "done": "Saxlanıldı",
+      "failed": "Uğursuz",
+      "skipped": "Ötürüldü"
+    },
+    "subtitle": "Pleylisti yüklə, videoları seç və növbə ilə yüklə.",
+    "unavailable": "Əlçatmazdır"
+  },
+  "study": {
+    "heading": "Süni intellekt öyrənmə rejimi",
+    "subtitle": "Altyazılar — video altyazısızdırsa, lokal nitq tanıma ilə alınan transkript — xülasəyə, əsas anlayışlara və testə çevrilir.",
+    "generate": "Dərs paketi yarat",
+    "generating": "Transkript oxunur…",
+    "regenerate": "Yenidən yarat",
+    "providerLabel": "Yaradan",
+    "provider": {
+      "offline": "Oflayn analizator",
+      "anthropic": "Claude"
+    },
+    "tabs": {
+      "summary": "Xülasə",
+      "concepts": "Əsas anlayışlar",
+      "quiz": "Test",
+      "transcript": "Transkript"
+    },
+    "summaryTitle": "Bu video nədən bəhs edir",
+    "conceptsTitle": "Əsas anlayışlar",
+    "conceptTakeaway": "Nəticə",
+    "quizTitle": "Özünü yoxla",
+    "quizIntro": "Transkriptdən {count} sual yaradıldı.",
+    "quizStart": "Testə başla",
+    "quizNext": "Növbəti sual",
+    "quizPrev": "Əvvəlki",
+    "quizFinish": "Nəticəyə bax",
+    "quizRestart": "Yenidən cəhd et",
+    "quizProgress": "Sual {current} / {total}",
+    "quizScore": "Nəticən: {score} / {total}",
+    "quizCorrect": "Doğru",
+    "quizWrong": "Səhv",
+    "quizAnswerWas": "Doğru cavab:",
+    "quizPerfect": "Mükəmməl — mövzunu tam bilirsən.",
+    "quizGood": "Yaxşı nəticə. Səhv anlayışları təkrarla.",
+    "quizPoor": "Xülasəni bir daha nəzərdən keçirmək faydalı olar.",
+    "transcriptTitle": "İnteraktiv transkript",
+    "transcriptSearch": "Transkriptdə axtar…",
+    "transcriptHits": "{count} nəticə",
+    "chaptersTitle": "Bölmələr",
+    "noTranscript": "Bu media üçün transkript yaradıla bilmədi.",
+    "langLabel": "Transkript dili",
+    "autoCaptions": "Avtomatik yaradılıb",
+    "stats": {
+      "words": "Söz",
+      "readingTime": "Oxuma vaxtı",
+      "segments": "Seqment"
+    },
+    "jumpHint": "Pleyeri həmin anı keçirmək üçün istənilən sətrə klikləyin.",
+    "speech": {
+      "queued": "Transkripsiya hazırlanır…",
+      "downloading": "Səs alınır… {progress}%",
+      "transcribing": "Nitq lokal olaraq mətnə çevrilir… {progress}%",
+      "note": "Altyazı tapılmadı — səs bu kompüterdə Whisper ({model}) ilə mətnə çevriləcək.",
+      "unavailable": "Altyazı tapılmadı və lokal nitq tanıma quraşdırılmayıb. Serverdə npm run setup:whisper əmrini işlət.",
+      "truncated": "Yalnız ilk {minutes} dəqiqə mətnə çevrildi.",
+      "source": "Whisper ilə lokal olaraq mətnə çevrilib"
+    },
+    "thinNote": "Bu transkript əsas anlayışlar və ya test üçün çox qısadır, ona görə tam göstərilir.",
+    "sourceCaptions": "Altyazı trekindən"
+  },
+  "clip": {
+    "gifOption": "GIF (animasiyalı, səssiz)",
+    "gifFps": "GIF kadr tezliyi",
+    "heading": "FFmpeg klip studiyası",
+    "subtitle": "Hissəni kəs, başlıq, nişan, altyazı və tərəqqi zolağı əlavə et — hamısı serverdə FFmpeg ilə render olunur.",
+    "range": "Zaman aralığı",
+    "start": "Başlanğıc",
+    "end": "Son",
+    "clipLength": "Klip uzunluğu",
+    "useCurrent": "Pleyerin mövqeyini götür",
+    "options": "Render parametrləri",
+    "titleOverlay": "Başlıq yazısı",
+    "titleOverlayPlaceholder": "Klipin yuxarısında görünəcək mətn",
+    "progressBar": "Tərəqqi zolağı",
+    "progressBarHint": "Aşağı kənarda animasiyalı zolaq.",
+    "watermark": "Su nişanı",
+    "watermarkPlaceholder": "məsələn @istifadəçi",
+    "position": "Nişanın mövqeyi",
+    "positions": {
+      "tl": "Yuxarı sol",
+      "tr": "Yuxarı sağ",
+      "bl": "Aşağı sol",
+      "br": "Aşağı sağ"
+    },
+    "subtitles": "Altyazını yandır",
+    "subtitlesHint": "Videonun altyazısından istifadə edir; altyazı yoxdursa deaktivdir.",
+    "quality": "Çıxış keyfiyyəti",
+    "format": "Konteyner",
+    "render": "Klipi render et",
+    "rendering": "Render olunur…",
+    "cancel": "Renderi ləğv et",
+    "download": "Klipi yüklə",
+    "renderAnother": "Yeni klip",
+    "stages": {
+      "queued": "Növbədə",
+      "downloading": "Mənbə axınları alınır",
+      "processing": "FFmpeg ilə kodlanır",
+      "done": "Hazırdır",
+      "failed": "Uğursuz",
+      "canceled": "Ləğv edildi"
+    },
+    "errors": {
+      "range": "Bitmə vaxtı başlanğıcdan sonra olmalıdır.",
+      "tooLong": "Kliplər {max} ilə məhdudlaşır ki, render sürətli olsun.",
+      "bounds": "Aralıq videonun müddəti daxilində olmalıdır.",
+      "noVideo": "Əvvəlcə video yüklə."
+    },
+    "recent": "Son kliplər",
+    "noClips": "Hələ klip render edilməyib.",
+    "delete": "Klipi sil"
+  },
+  "history": {
+    "heading": "Yükləmə tarixçəsi",
+    "subtitle": "Yalnız tamamlanmış yükləmələr, SQLite-da lokal saxlanılır.",
+    "empty": "Yükləmə tarixçəsi boşdur.",
+    "clear": "Tarixçəni təmizlə",
+    "confirmClear": "Bütün qeydlər silinsin? Bu geri qaytarıla bilməz.",
+    "remove": "Qeydi sil",
+    "again": "Yenidən yüklə",
+    "columns": {
+      "title": "Başlıq",
+      "type": "Növ",
+      "quality": "Keyfiyyət",
+      "size": "Həcm",
+      "date": "Tarix",
+      "actions": "Əməliyyat"
+    },
+    "totals": "{count} yükləmə · {size} ötürülüb"
+  },
+  "toast": {
+    "metaLoaded": "Video yükləndi",
+    "metaFailed": "Video oxuna bilmədi",
+    "playlistLoaded": "Pleylist yükləndi",
+    "playlistFailed": "Pleylist oxuna bilmədi",
+    "downloadStarted": "Yükləmə başladı",
+    "downloadFailed": "Yükləmə uğursuz oldu",
+    "queueFinished": "Növbə bitdi — {done} saxlanıldı, {failed} uğursuz",
+    "studyReady": "Dərs paketi hazırdır",
+    "studyFailed": "Dərs paketi yaradıla bilmədi",
+    "clipQueued": "Klip render növbəsinə alındı",
+    "clipDone": "Klip render edildi",
+    "clipFailed": "Klip renderi uğursuz oldu",
+    "clipCanceled": "Render ləğv edildi",
+    "clipDeleted": "Klip silindi",
+    "historyCleared": "Tarixçə təmizləndi",
+    "entryRemoved": "Qeyd silindi",
+    "copied": "Buferə kopyalandı",
+    "copyFailed": "Kopyalana bilmədi",
+    "languageChanged": "Dil dəyişdirildi: {language}",
+    "themeLight": "İşıqlı tema aktivdir",
+    "themeDark": "Qaranlıq tema aktivdir",
+    "offline": "Görünür, oflaynsan",
+    "audioIdMatched": "Tanındı: {title}",
+    "audioIdNoMatch": "Uyğunluq tapılmadı",
+    "audioIdCleared": "Siyahı təmizləndi",
+    "audioIdRemoved": "Silindi"
+  },
+  "errors": {
+    "authRequired": "Bu paylaşım üçün hesaba giriş lazımdır. Daxil olmaq üçün kuki faylı əlavə et.",
+    "unsupportedSite": "Çıxarış mühərriki bu saytı dəstəkləmir.",
+    "geoBlocked": "Bu media serverin regionunda bloklanıb.",
+    "needsCookies": "Sayt bu serverdən bot olmadığını sübut etməyi istədi. Adətən kuki faylı bunu həll edir.",
+    "transcode": "FFmpeg bu mənbədən həmin formatı yarada bilmədi.",
+    "engineMissing": "Bu platforma üçün yt-dlp lazımdır, lakin serverdə quraşdırılmayıb.",
+    "gifRange": "GIF zaman aralığından kəsilir — Klip studiyasından istifadə et.",
+    "generic": "Nəsə səhv getdi. Yenidən cəhd et.",
+    "network": "Server əlçatmazdır.",
+    "invalidUrl": "Dəstəklənməyən və ya səhv link.",
+    "notFound": "Video tapılmadı.",
+    "private": "Bu video gizlidir və ya yaş məhdudiyyəti var.",
+    "live": "Canlı yayımlar emal edilə bilməz.",
+    "unavailable": "Bu video serverin regionunda əlçatan deyil.",
+    "ffmpeg": "Serverdə FFmpeg mövcud deyil.",
+    "rateLimited": "YouTube bu serverə limit tətbiq edir. Bir azdan yenidən cəhd et.",
+    "tooLarge": "Bu sorğu təyin olunmuş limitləri aşır.",
+    "busy": "Server başqa renderlə məşğuldur.",
+    "blocked": "Sayt bu serverə imtina etdi (HTTP 403). Adətən müvəqqəti bot qorumasıdır — sonra yenidən cəhd et.",
+    "speechFailed": "Nitqin mətnə çevrilməsi alınmadı.",
+    "audioTooShort": "Yazı tanımaq üçün çox qısadır.",
+    "audioUnreadable": "Yazı dekodlaşdırıla bilmədi.",
+    "recognitionLimited": "Tanıma xidmətinin pulsuz limiti bitib. API açarı əlavə et və ya sonra cəhd et.",
+    "recognitionFailed": "Tanıma xidməti hazırda əlçatmazdır.",
+    "noSpeech": "Bu mediada nitq aşkarlanmadı — musiqi və ya sükut ola bilər.",
+    "upstream": "Mənbə sayt xəta qaytardı. Bir az sonra yenidən cəhd et.",
+    "timeout": "Mənbə cavab verməkdə çox gecikdi.",
+    "noCaptions": "Bu medianın altyazısı yoxdur və transkript yaradıla bilmədi."
+  },
+  "common": {
+    "close": "Bağla",
+    "cancel": "Ləğv et",
+    "confirm": "Təsdiqlə",
+    "retry": "Təkrarla",
+    "loading": "Yüklənir…",
+    "search": "Axtar",
+    "copy": "Linki kopyala",
+    "open": "Aç",
+    "delete": "Sil",
+    "all": "Hamısı",
+    "yes": "Bəli",
+    "no": "Xeyr",
+    "optional": "istəyə bağlı",
+    "on": "Aktiv",
+    "off": "Deaktiv",
+    "unknown": "Naməlum",
+    "auto": "Avtomatik",
+    "beta": "Beta",
+    "second": "s",
+    "minute": "d",
+    "hour": "saat"
+  },
+  "skeleton": {
+    "label": "Metaməlumatlar alınır…"
+  },
+  "formatsSection": {
+    "title": "Dəstəklənən formatlar",
+    "subtitle": "Bütün çevirmələr öz kompüterində FFmpeg ilə aparılır. İş axınına uyğun konteyneri seç.",
+    "audioTab": "Audio formatlar",
+    "videoTab": "Video formatlar",
+    "lossless": "İtkisiz",
+    "lossy": "İtkili",
+    "remux": "Yenidən kodlanmır",
+    "audio": {
+      "mp3": {
+        "name": "MP3",
+        "tagline": "Universal",
+        "desc": "Demək olar ki, bütün media pleyerlərlə uyğun universal audio formatı."
+      },
+      "aac": {
+        "name": "AAC",
+        "tagline": "Yüksək səmərə",
+        "desc": "Müasir cihazlar üçün standart yüksək səmərəli audio kodlaşdırma."
+      },
+      "m4a": {
+        "name": "M4A",
+        "tagline": "AAC konteyneri",
+        "desc": "Apple cihazları üçün optimal sıxılmaya malik yüksək keyfiyyətli AAC audio konteyneri."
+      },
+      "alac": {
+        "name": "ALAC",
+        "tagline": "Apple-da itkisiz",
+        "desc": "Apple-ın itkisiz kodeki — iOS və macOS-da doğma dəstəklə studiya keyfiyyətli səs."
+      },
+      "flac": {
+        "name": "FLAC",
+        "tagline": "İtkisiz",
+        "desc": "Orijinal studiya səsinin 100%-ni qoruyan itkisiz audio formatı."
+      },
+      "wav": {
+        "name": "WAV",
+        "tagline": "Sıxılmamış",
+        "desc": "Peşəkar audio redaktə proqramları üçün sıxılmamış PCM audio."
+      },
+      "opus": {
+        "name": "Opus",
+        "tagline": "Aşağı gecikmə",
+        "desc": "Veb axını üçün hazırlanmış çox səmərəli, aşağı gecikməli audio kodek."
+      },
+      "ogg": {
+        "name": "OGG",
+        "tagline": "Açıq mənbə",
+        "desc": "Veb tətbiqlər və oyunlar üçün açıq mənbəli audio konteyneri."
+      }
+    },
+    "video": {
+      "mp4": {
+        "name": "MP4",
+        "tagline": "H.264",
+        "desc": "Bütün cihazlarda dəstəklənən sənaye standartı video konteyneri."
+      },
+      "mkv": {
+        "name": "MKV",
+        "tagline": "Matroska",
+        "desc": "Çoxlu audio trek, altyazı və itkisiz remuksu dəstəkləyən çevik konteyner."
+      },
+      "webm": {
+        "name": "WebM",
+        "tagline": "HTML5",
+        "desc": "Sürətli HTML5 axını üçün optimallaşdırılmış müasir veb video formatı."
+      },
+      "mov": {
+        "name": "MOV",
+        "tagline": "QuickTime",
+        "desc": "Video montaj iş axınları üçün yüksək bitreytli Apple QuickTime formatı."
+      },
+      "avi": {
+        "name": "AVI",
+        "tagline": "Klassik",
+        "desc": "Köhnə avadanlıqla uyğunluğu təmin edən klassik video formatı."
+      },
+      "flv": {
+        "name": "FLV",
+        "tagline": "Flash",
+        "desc": "Köhnə video axınları üçün Flash video konteyneri."
+      },
+      "gif": {
+        "name": "GIF",
+        "tagline": "Animasiya",
+        "desc": "Sosial paylaşım üçün səssiz, dövri animasiya ardıcıllığı."
+      }
+    }
+  },
+  "footer": {
+    "brand": "TubeForge Media Mühərriki",
+    "powered": "FFmpeg və SQLite ilə işləyir",
+    "license": "Yalnız şəxsi və açıq lisenziyalı məzmunun emalı üçün.",
+    "copyright": "© {year} TubeForge"
+  },
+  "a11y": {
+    "scrollTop": "Yuxarı qayıt",
+    "choosePlatform": "Platforma seç",
+    "moreSites": "Daha çox dəstəklənən sayt göstər",
+    "skipToContent": "Əsas məzmuna keç",
+    "openMenu": "Naviqasiya menyusunu aç",
+    "closeMenu": "Naviqasiya menyusunu bağla",
+    "toggleTheme": "Rəng temasını dəyiş",
+    "selectLanguage": "İnterfeys dilini seç",
+    "playVideo": "Video önizləməsini oynat",
+    "closeModal": "Dialoqu bağla",
+    "selectVideo": "Bu videonu seç",
+    "renderProgress": "Render tərəqqisi",
+    "downloadProgress": "Yükləmə tərəqqisi",
+    "listen": "Dinləməyə başla"
+  },
+  "tools": {
+    "load": "Yüklə",
+    "loading": "Yüklənir…",
+    "placeholderStudy": "Öyrənmək üçün video və ya audio linkini yapışdır…",
+    "placeholderClip": "Kəsmək üçün video linkini yapışdır…",
+    "placeholderPlaylist": "Pleylist linkini yapışdır…",
+    "hintStudy": "Altyazı varsa ondan istifadə olunur; yoxdursa, səs bu kompüterdə mətnə çevrilir.",
+    "hintClip": "Aralıq seç, üzərinə yazılar əlavə et — FFmpeg serverdə render edir.",
+    "hintPlaylist": "YouTube pleylistləri — pleylist daxilində oynayan videodan kopyalanan linklər də daxil."
+  },
+  "audioId": {
+    "title": "Audio ID",
+    "subtitle": "Mikrofondan və ya bu kompüterdə səslənən audiodan mahnını tanı və birbaşa ona keç.",
+    "listen": "Dinləmək üçün toxun",
+    "listening": "Dinlənilir… {seconds}s",
+    "identifying": "Tanınır…",
+    "stop": "Dayandır",
+    "sourceLabel": "Mənbə",
+    "sources": {
+      "mic": "Mikrofon",
+      "system": "Sistem səsi",
+      "both": "Hər ikisi"
+    },
+    "sourceHints": {
+      "mic": "Cihazı dinamikə yaxın tut.",
+      "system": "Brauzer hansı tabı və ya ekranı paylaşacağını soruşacaq — «Səsi paylaş» seçimini işarələ.",
+      "both": "Mikrofonu paylaşılan sistem səsi ilə qarışdırır."
+    },
+    "noMatch": "Uyğunluq tapılmadı. Mahnının daha yüksək və ya uzun hissəsini sına.",
+    "matched": "Uyğunluq tapıldı",
+    "recent": "Son tanınanlar",
+    "empty": "Hələ heç nə tanınmayıb.",
+    "clear": "Siyahını təmizlə",
+    "confirmClear": "Bütün tanınan treklər silinsin?",
+    "open": "TubeForge-da aç",
+    "youtube": "YouTube",
+    "spotify": "Spotify",
+    "apple": "Apple Music",
+    "songLink": "Bütün platformalar",
+    "keyless": "AudD-nin pulsuz açarsız rejimi istifadə olunur — daha yüksək limit üçün AUDD_API_TOKEN təyin et.",
+    "level": "Giriş səviyyəsi",
+    "remove": "Sil",
+    "via": "{provider} vasitəsilə",
+    "errors": {
+      "insecure": "Səs yazmaq üçün HTTPS və ya localhost lazımdır. TubeForge-u bu kompüterdə http://localhost:3000 ünvanında aç.",
+      "unsupported": "Bu brauzer səs yaza bilmir.",
+      "denied": "Səs girişinə icazə verilmədi.",
+      "noSystemAudio": "Səs paylaşılmadı. Paylaşma pəncərəsində «Tab səsini paylaş» və ya «Sistem səsini paylaş» seçimini işarələ.",
+      "systemUnsupported": "Bu brauzer sistem səsini tuta bilmir. Chrome və ya Edge istifadə et, ya da Mikrofonu seç.",
+      "silent": "Heç nə eşidilmədi — giriş səssiz idi."
+    }
+  }
+}
